@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header ("Enemy Stats")]
     public int health;
-    public float flashTime;
 
     private SpriteRenderer sRenderer;
     private Color originalColor;
 
+    private float flashTime;
+
     private void Start() {
         sRenderer = gameObject.GetComponent<SpriteRenderer>();
         originalColor = sRenderer.color;
-        flashTime = 0.2f;
+        flashTime = 0.1f;
+        
     }
 
-    public void TakeDamage(int damageTaken){
+    public void HitByPlayer(int damageTaken) {
+        TakeDamage(damageTaken);
+    }
+
+    private void TakeDamage(int damageTaken){
         health -= damageTaken;
         if(health <= 0) {
             Die();
@@ -36,4 +43,5 @@ public class Enemy : MonoBehaviour
     private void Die() {
         Destroy(gameObject);
     }
+
 }

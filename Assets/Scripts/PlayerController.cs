@@ -4,40 +4,53 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
+    [Header ("Player Stats")]
     public float speed;
+    public float health;
+    public float iFrames;
+    
+    [Header ("Attack Positions")]
+    public Transform attackUpPos;
+    public Transform attackDownPos;
+    public Transform attackLeftPos;
+    public Transform attackRightPos;
 
-    public Transform attackUpPos, attackDownPos, attackLeftPos, attackRightPos;
-    public Vector2 velocity;
+    private SpriteRenderer rend;
     private Rigidbody2D rb;
     private Animator animator;
     private Camera cam;
+    private Weapon weapon;
 
+    private bool isInvincible;
     private int attackDirection,weaponDamage;
     private LayerMask enemyLayerMask;
     private Vector2 mousePos, movementInput, movement;
-    private float timeBtwAttack, startTimeBtwAttack, animWepIndex, attackRange;
+    private float iFrameTime,timeBtwAttack, startTimeBtwAttack, animWepIndex, attackRange;
 
 
     private void Start() { 
     
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        rend = GetComponent<SpriteRenderer>();
+        weapon = GetComponentInChildren<Weapon>();
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         
+        isInvincible = false;
         timeBtwAttack = 0f;
         startTimeBtwAttack = 0.55f;
-        animWepIndex = gameObject.GetComponentInChildren<Weapon>().animatorIndex;
-        weaponDamage = gameObject.GetComponentInChildren<Weapon>().damage;
-        attackRange = gameObject.GetComponentInChildren<Weapon>().range;
+        animWepIndex = weapon.animatorIndex;
+        weaponDamage = weapon.damage;
+        attackRange = weapon.range;
         enemyLayerMask = LayerMask.GetMask("Enemy");
+        
     }
 
     private void Update() {
         GetInput();
+        IFrameControl();
         SetAnimatorMovementParams();
         Attack();
-        velocity = rb.velocity;
     }
 
     private void FixedUpdate() {
@@ -106,7 +119,7 @@ public class PlayerController : MonoBehaviour
                         break;
                 }
                 for(int i = 0; i < enemies.Length; ++i) {
-                    enemies[i].GetComponent<Enemy>().TakeDamage(weaponDamage);
+                    enemies[i].GetComponent<Enemy>().HitByPlayer(weaponDamage);
                 }
 
             }
@@ -114,6 +127,29 @@ public class PlayerController : MonoBehaviour
         else {
             timeBtwAttack -= Time.deltaTime;
         }
+    }
+
+    private void IFrameControl(){
+        if (isInvincible) {
+            iFrameTime -= Time.deltaTime;
+            if(iFrameTime <= 0f) {
+                isInvincible = false;
+                Color color = rend.material.color;
+                color.a = 1f;
+                rend.material.color = color;
+            }
+        }
+    }
+
+    public void TakeDamage(int damage) {
+        health -= damage;
+        isInvincible = true;
+        iFrameTime = iFrames;
+
+        Color color = rend.material.color;
+        color.a = 0.5f;
+        rend.material.color = color;
+        
     }
 
     private void OnDrawGizmosSelected()

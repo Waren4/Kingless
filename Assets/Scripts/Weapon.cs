@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    
+    // Order: Glow Sword Blue, ...
     public static int[] damageValues = { 12 };
     public static float[] ranges = { 1f };
 

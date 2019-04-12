@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float health;
     public float iFrames;
+    public float knockbackStrength;
     
     [Header ("Attack Positions")]
     public Transform attackUpPos;
@@ -28,8 +29,7 @@ public class PlayerController : MonoBehaviour
     private float iFrameTime,timeBtwAttack, startTimeBtwAttack, animWepIndex, attackRange;
 
 
-    private void Start() { 
-    
+    private void Start() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
         animWepIndex = weapon.animatorIndex;
         weaponDamage = weapon.damage;
         attackRange = weapon.range;
+        knockbackStrength += weapon.knockback;
         enemyLayerMask = LayerMask.GetMask("Enemy");
         
     }
@@ -70,7 +71,8 @@ public class PlayerController : MonoBehaviour
         };
         float minDistance = distances[0];
         attackDirection = 1;
-        for (int i = 1; i < 4; ++i) if (minDistance > distances[i]) {
+        for (int i = 1; i < 4; ++i)
+            if (minDistance > distances[i]) {
                 minDistance = distances[i];
                 attackDirection = i + 1;
             }
@@ -119,7 +121,7 @@ public class PlayerController : MonoBehaviour
                         break;
                 }
                 for(int i = 0; i < enemies.Length; ++i) {
-                    enemies[i].GetComponent<Enemy>().HitByPlayer(weaponDamage);
+                    enemies[i].GetComponent<Enemy>().HitByPlayer(weaponDamage,knockbackStrength,new Vector2(transform.position.x,transform.position.y));
                 }
 
             }
@@ -149,12 +151,16 @@ public class PlayerController : MonoBehaviour
         Color color = rend.material.color;
         color.a = 0.5f;
         rend.material.color = color;
-        
+           
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackDownPos.position, attackRange);
+        Gizmos.DrawWireSphere(attackUpPos.position, attackRange);
+        Gizmos.DrawWireSphere(attackLeftPos.position, attackRange);
+        Gizmos.DrawWireSphere(attackRightPos.position, attackRange);
+
     }
 }

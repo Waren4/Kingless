@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 2018078518}
   m_Layer: 9
   m_Name: EnemyCollider
-  m_TagString: Player
+  m_TagString: PlayerCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,11 +202,11 @@ GameObject:
   - component: {fileID: 2876834801455199469}
   - component: {fileID: 1996764675867727239}
   - component: {fileID: 8510463694553362193}
-  - component: {fileID: 9205421744705982687}
   - component: {fileID: 4828596309671210772}
   - component: {fileID: 5177653297803253169}
+  - component: {fileID: 1771134808}
   m_Layer: 11
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -268,7 +268,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: ea3f1bd9fa4019441897ad81d6a7a4e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -295,6 +295,7 @@ MonoBehaviour:
   speed: 7
   health: 100
   iFrames: 1
+  knockbackStrength: 5
   attackUpPos: {fileID: 825675886}
   attackDownPos: {fileID: 386792336}
   attackLeftPos: {fileID: 1404783896}
@@ -320,22 +321,6 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &9205421744705982687
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590299939740030738}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1}
-  serializedVersion: 2
-  m_Radius: 0.35
 --- !u!95 &4828596309671210772
 Animator:
   serializedVersion: 3
@@ -370,6 +355,22 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!70 &1771134808
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590299939740030738}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.9}
+  m_Size: {x: 0.75, y: 0.2}
+  m_Direction: 1
 --- !u!1001 &957939089857111941
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -29,10 +29,11 @@ public class EnemySpider : MonoBehaviour
     private float attackDelay;
     private Vector2 hitboxVert,hitboxHor;
 
+    private Rigidbody2D rb;
     private GameObject player;
     private LayerMask playerLayerMask;
     private Animator animator;
-    private Vector2 moveDestination;
+    private Vector2 moveDirection;
     private float timeBetweenMoves;
     private float timeBetweenAttacks;
 
@@ -41,7 +42,8 @@ public class EnemySpider : MonoBehaviour
         timeBetweenMoves = 0f;
         timeBetweenAttacks = 0f;
         animator = GetComponent<Animator>();
-
+        rb = GetComponent<Rigidbody2D>();
+        
         player = GameObject.FindGameObjectWithTag("Player");
         playerLayerMask = LayerMask.GetMask("EnemyCollisions");
 
@@ -57,7 +59,7 @@ public class EnemySpider : MonoBehaviour
         if (timeBetweenMoves <= 0f)
         {
             GetRandomDirection();
-            StartCoroutine(Move(moveDestination));
+            StartCoroutine(Move(moveDirection));
             timeBetweenMoves = startTimeBtwMoves;
         }
         else {
@@ -85,79 +87,93 @@ public class EnemySpider : MonoBehaviour
     private void TickAttackTimer(){
         if (timeBetweenAttacks > 0f) timeBetweenAttacks -= Time.deltaTime;
     }
+
     private void TickMoveTimer() {
         timeBetweenMoves -= Time.deltaTime;
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
 
         if (other.CompareTag("PlayerCollider"))
         {
             other.GetComponentInParent<PlayerController>().TakeDamage(collisionDamage);
-            other.GetComponent<PlayerDamage>().DisableCollider();
+            
         }
     }
 
     private void GetRandomDirection()
     {
         int ranDirection = Random.Range(1, 5);
-        moveDestination = new Vector2(transform.position.x, transform.position.y);
 
+        moveDirection = new Vector2(0f, 0f);
         switch (ranDirection)
         {
             case 1:
-                if(color == 'G' || color == 'B') {
-                    moveDestination.y -= moveDistance;
+                if(color == 'G' || color == 'B')
+                {
+                    moveDirection.y = -1f;
                 }
-                if(color == 'R') {
-                    moveDestination.y -= moveDistance;
-                    moveDestination.x -= moveDistance;
+                if(color == 'R')
+                {
+                    moveDirection.y = -1f;
+                    moveDirection.x = -1f;
                 }
                 animator.SetFloat("MoveDirection", 1f);
                 break;
             case 2:
-                if (color == 'G' || color == 'B') {
-                    moveDestination.x -= moveDistance;
+                if (color == 'G' || color == 'B')
+                {
+                    moveDirection.x = -1f;
                 }
-                if (color == 'R') {
-                    moveDestination.y += moveDistance;
-                    moveDestination.x -= moveDistance;
+                if (color == 'R')
+                {
+                    moveDirection.y = 1f;
+                    moveDirection.x = -1f;
                 }
                 animator.SetFloat("MoveDirection", 2f);
                 break;
             case 3:
-                if (color == 'G' || color == 'B') {
-                    moveDestination.y += moveDistance;
+                if (color == 'G' || color == 'B')
+                {
+                    moveDirection.y = 1f;
                 }
-                if (color == 'R') {
-                    moveDestination.y += moveDistance;
-                    moveDestination.x += moveDistance;
+                if (color == 'R')
+                {
+                    moveDirection.y = 1f;
+                    moveDirection.x = 1f;
                 }
                 animator.SetFloat("MoveDirection", 3f);
                 break;
             case 4:
-                if (color == 'G' || color == 'B') {
-                    moveDestination.x += moveDistance;
+                if (color == 'G' || color == 'B')
+                {
+                    moveDirection.x = 1f;
                 }
-                if (color == 'R') {
-                    moveDestination.y -= moveDistance;
-                    moveDestination.x += moveDistance;
+                if (color == 'R')
+                {
+                    moveDirection.y = -1f;
+                    moveDirection.x = 1f;
                 }
                 animator.SetFloat("MoveDirection", 4f);
                 break;
             default:
                 break;
         }
+
     }
 
-    IEnumerator Move(Vector2 destination)
+    IEnumerator Move(Vector2 direction)
     {
-        while (new Vector2(transform.position.x, transform.position.y) != destination)
-        {
+        float moveTime = 0.65f;
+        while(moveTime >= 0f) {
             animator.SetBool("IsMoving", true);
-            transform.position = Vector2.MoveTowards(transform.position, destination, speed * Time.deltaTime);
+            rb.AddForce(direction.normalized * speed );
             yield return null;
+            moveTime -= Time.deltaTime;
+            
         }
+
         animator.SetBool("IsMoving", false);
     }
 
@@ -214,6 +230,7 @@ public class EnemySpider : MonoBehaviour
         }
         
     }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

@@ -7,6 +7,9 @@ public class Enemy : MonoBehaviour
     [Header ("Enemy Stats")]
     public int health;
 
+    [Header("Enemy Script")]
+    public MonoBehaviour enemyScript;
+
     private Rigidbody2D rb;
     private SpriteRenderer sRenderer;
     private Color originalColor;
@@ -24,6 +27,7 @@ public class Enemy : MonoBehaviour
     public void HitByPlayer(int damageTaken, float knockback, Vector2 position) {
         TakeDamage(damageTaken);
         KnockBackOnHit(knockback, position);
+        //enemyScript.StopCoroutine("Move");     
     }
 
     private void TakeDamage(int damageTaken){

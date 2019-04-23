@@ -44,7 +44,8 @@ public class PlayerController : MonoBehaviour
         attackRange = weapon.range;
         knockbackStrength += weapon.knockback;
         enemyLayerMask = LayerMask.GetMask("Enemy");
-        
+
+       
     }
 
     private void Update() {
@@ -94,42 +95,102 @@ public class PlayerController : MonoBehaviour
     
     private void Attack() {
         if (timeBtwAttack <= 0f) {
+            bool attacked = false;
+
             if(Input.GetButtonDown("Fire1")) {
 
+                attacked = true;
                 timeBtwAttack = startTimeBtwAttack;
-                Collider2D[] enemies = null;
+                
                 animator.SetTrigger("Attack");
                 switch (attackDirection)
                 {
                     case 1:
-                        enemies = Physics2D.OverlapCircleAll(attackDownPos.position, attackRange, enemyLayerMask);
+                        StartCoroutine(SpawnAttackCircle(attackDownPos.position));
                         animator.SetFloat("AttackDirection", 1f);
                         break;
                     case 2:
-                        enemies = Physics2D.OverlapCircleAll(attackLeftPos.position, attackRange, enemyLayerMask);
+                        StartCoroutine(SpawnAttackCircle(attackLeftPos.position));
                         animator.SetFloat("AttackDirection", 2f);
                         break;
                     case 3:
-                        enemies = Physics2D.OverlapCircleAll(attackUpPos.position, attackRange, enemyLayerMask);
+                        StartCoroutine(SpawnAttackCircle(attackUpPos.position));
                         animator.SetFloat("AttackDirection", 3f);
                         break;
                     case 4:
-                        enemies = Physics2D.OverlapCircleAll(attackRightPos.position, attackRange, enemyLayerMask);
+                        StartCoroutine(SpawnAttackCircle(attackRightPos.position));
                         animator.SetFloat("AttackDirection", 4f);
                         break;
                     default:
                         break;
                 }
-                for(int i = 0; i < enemies.Length; ++i) {
-                    enemies[i].GetComponent<Enemy>().HitByPlayer(weaponDamage,knockbackStrength,new Vector2(transform.position.x,transform.position.y));
-                }
+                
 
             }
+
+            if(!attacked && Input.GetKeyDown(KeyCode.DownArrow)) {
+                attacked = true;
+                timeBtwAttack = startTimeBtwAttack;
+                
+                animator.SetTrigger("Attack");
+                animator.SetFloat("AttackDirection", 1f);
+
+                StartCoroutine(SpawnAttackCircle(attackDownPos.position));
+
+            }
+
+            if (!attacked && Input.GetKeyDown(KeyCode.LeftArrow)) {
+                attacked = true;
+                timeBtwAttack = startTimeBtwAttack;
+                
+                animator.SetTrigger("Attack");
+                animator.SetFloat("AttackDirection", 2f);
+
+                StartCoroutine(SpawnAttackCircle(attackLeftPos.position));
+              
+            }
+
+            if (!attacked && Input.GetKeyDown(KeyCode.UpArrow)) {
+                attacked = true;
+                timeBtwAttack = startTimeBtwAttack;
+                
+                animator.SetTrigger("Attack");
+                animator.SetFloat("AttackDirection", 3f);
+
+                StartCoroutine(SpawnAttackCircle(attackUpPos.position));
+
+            }
+
+            if (!attacked && Input.GetKeyDown(KeyCode.RightArrow)) {
+                attacked = true;
+                timeBtwAttack = startTimeBtwAttack;
+               
+                animator.SetTrigger("Attack");
+                animator.SetFloat("AttackDirection", 4f);
+
+
+                StartCoroutine(SpawnAttackCircle(attackRightPos.position));
+                
+            }
+            
         }
         else {
             timeBtwAttack -= Time.deltaTime;
         }
     }
+
+    IEnumerator SpawnAttackCircle(Vector2 position)
+    {
+        yield return new WaitForSeconds(0.1f);
+        Collider2D[] enemies = null;
+        enemies = Physics2D.OverlapCircleAll(position, attackRange, enemyLayerMask);
+
+        for (int i = 0; i < enemies.Length; ++i)
+        {
+            enemies[i].GetComponent<Enemy>().HitByPlayer(weaponDamage, knockbackStrength, new Vector2(transform.position.x, transform.position.y));
+        }
+    }
+
 
     private void IFrameControl(){
         if (isInvincible) {
@@ -147,6 +208,8 @@ public class PlayerController : MonoBehaviour
         health -= damage;
         isInvincible = true;
         iFrameTime = iFrames;
+
+        GetComponentInChildren<PlayerDamage>().DisableCollider();
 
         Color color = rend.material.color;
         color.a = 0.5f;

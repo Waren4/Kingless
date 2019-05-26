@@ -181,7 +181,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator SpawnAttackCircle(Vector2 position)
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.15f);
         Collider2D[] enemies = null;
         enemies = Physics2D.OverlapCircleAll(position, attackRange, enemyLayerMask);
 
@@ -205,15 +205,19 @@ public class PlayerController : MonoBehaviour
     }
 
     public void TakeDamage(int damage) {
-        health -= damage;
-        isInvincible = true;
-        iFrameTime = iFrames;
+        if(!isInvincible) {
 
-        GetComponentInChildren<PlayerDamage>().DisableCollider();
+            health -= damage;
+            isInvincible = true;
+            iFrameTime = iFrames;
 
-        Color color = rend.material.color;
-        color.a = 0.5f;
-        rend.material.color = color;
+            //GetComponentInChildren<PlayerDamage>().DisableCollider();
+
+            Color color = rend.material.color;
+            color.a = 0.5f;
+            rend.material.color = color;
+        }
+        
            
     }
 

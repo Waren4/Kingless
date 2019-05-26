@@ -20,7 +20,7 @@ public class FloorGenerator : MonoBehaviour
         switch (floorNumber)
         {
             case 1:
-                numberOfRooms = 12;
+                numberOfRooms = 15;
                 break;
             default:
                 break;

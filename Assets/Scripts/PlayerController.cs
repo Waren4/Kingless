@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public static float maxHealth = 100;
+    public static int damageBoost = 0;
+
     [Header ("Player Stats")]
     public float speed;
     public float health;
-    public float maxHealth;
     public float iFrames;
     public float knockbackStrength;
     
@@ -41,13 +43,13 @@ public class PlayerController : MonoBehaviour
 
         isInvincible = false;
 
-        maxHealth = health;
+        health = maxHealth;
 
         timeBtwAttack = 0f;
         startTimeBtwAttack = 0.55f;
 
         animWepIndex = weapon.animatorIndex;
-        weaponDamage = weapon.damage;
+        weaponDamage = weapon.damage + damageBoost;
         attackRange = weapon.range;
         knockbackStrength += weapon.knockback;
 

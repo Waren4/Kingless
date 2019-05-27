@@ -21,7 +21,7 @@ public class Healthbar : MonoBehaviour
     }
 
     private void SetHealth(){
-        bar.fillAmount = player.health / player.maxHealth;
-        barText.text = player.health.ToString() + "/" + player.maxHealth;
+        bar.fillAmount = player.health / PlayerController.maxHealth;
+        barText.text = player.health.ToString() + "/" + PlayerController.maxHealth;
     }
 }

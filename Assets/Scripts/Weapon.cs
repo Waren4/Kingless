@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Weapon : MonoBehaviour
 {
     // Order: Glow Sword Blue, ...
@@ -18,6 +19,6 @@ public class Weapon : MonoBehaviour
         int i = (int)animatorIndex;
         damage = damageValues[i];
         range = ranges[i];
-        knockback = knockbacks[i];
+        knockback = knockbacks[i];        
     }
 }

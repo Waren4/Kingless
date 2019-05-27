@@ -8,6 +8,7 @@ TagManager:
   - PlayerCollider
   - Enemy
   - Wall
+  - Canvas
   layers:
   - Default
   - TransparentFX

@@ -6,9 +6,13 @@ public class Enemy : MonoBehaviour
 {
     [Header ("Enemy Stats")]
     public int health;
+    public int giveScore;
 
     [Header("Enemy Script")]
     public MonoBehaviour enemyScript;
+
+    [Header("Death Animation")]
+    public GameObject deathAnimation;
 
     private Rigidbody2D rb;
     private SpriteRenderer sRenderer;
@@ -53,6 +57,8 @@ public class Enemy : MonoBehaviour
     }
 
     private void Die() {
+        Instantiate(deathAnimation, transform.position, Quaternion.identity);
+        GameManager.score += giveScore;
         Destroy(gameObject);
     }
 

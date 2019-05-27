@@ -34,7 +34,9 @@ public class RedImp : MonoBehaviour
     public Transform visionTransform;
     public float timeBetweenMoves;
 
-    
+    [Header("Slash Effect")]
+    public GameObject slashEffect;
+
     
     private float timeBetweenAttacks;
     private float attackDirection;
@@ -132,18 +134,22 @@ public class RedImp : MonoBehaviour
         {
             case 1:
                 playerCol = Physics2D.OverlapBoxAll(attackDown.position, hitboxVert, 0f, playerLayerMask);
+                Instantiate(slashEffect, attackDown.position, Quaternion.Euler(0f, 0f, 270f));
 
                 break;
             case 2:
                 playerCol = Physics2D.OverlapBoxAll(attackLeft.position, hitboxHor, 0f, playerLayerMask);
+                Instantiate(slashEffect, attackLeft.position, Quaternion.Euler(0f, 0f, 180f));
 
                 break;
             case 3:
                 playerCol = Physics2D.OverlapBoxAll(attackUp.position, hitboxVert, 0f, playerLayerMask);
+                Instantiate(slashEffect, attackUp.position, Quaternion.Euler(0f, 0f, 90f));
 
                 break;
             case 4:
                 playerCol = Physics2D.OverlapBoxAll(attackRight.position, hitboxHor, 0f, playerLayerMask);
+                Instantiate(slashEffect, attackRight.position, Quaternion.Euler(0f, 0f, 0f));
 
                 break;
             default:
@@ -159,7 +165,7 @@ public class RedImp : MonoBehaviour
             isMoving = false;
             timeBetweenMoves = startTimeBtwMoves;
             */
-            Debug.Log("Hit");
+            
         }
 
         
@@ -268,7 +274,7 @@ public class RedImp : MonoBehaviour
             other.GetComponentInParent<PlayerController>().TakeDamage(collisionDamage);
             speed = normalSpeed;
             
-            Debug.Log("Collision");
+            
         }
     }
 

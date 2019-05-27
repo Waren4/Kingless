@@ -101,8 +101,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f9365e2e92a1040bbd75b866ed95b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 60
+  health: 75
+  giveScore: 100
   enemyScript: {fileID: 0}
+  deathAnimation: {fileID: 3726251564197106554, guid: a0107f9152bb7a84e90d2b292b91eec2,
+    type: 3}
 --- !u!50 &1837632619342329654
 Rigidbody2D:
   serializedVersion: 4
@@ -181,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c516020526c652442a735b5b0669a200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1.3
+  range: 1.2
   attackDamage: 20
   hitboxX: 1.7
   hitboxY: 1.2
@@ -202,6 +205,8 @@ MonoBehaviour:
   isMoving: 0
   visionTransform: {fileID: 1837632619936575584}
   timeBetweenMoves: 0
+  slashEffect: {fileID: 5030514330759743112, guid: 62bd47d92d9583242827968dadfd666a,
+    type: 3}
 --- !u!1 &1837632619756274260
 GameObject:
   m_ObjectHideFlags: 0

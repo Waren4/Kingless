@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     [Header ("Player Stats")]
     public float speed;
     public float health;
+    public float maxHealth;
     public float iFrames;
     public float knockbackStrength;
     
@@ -35,33 +37,45 @@ public class PlayerController : MonoBehaviour
         rend = GetComponent<SpriteRenderer>();
         weapon = GetComponentInChildren<Weapon>();
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        
+        enemyLayerMask = LayerMask.GetMask("Enemy");
+
         isInvincible = false;
+
+        maxHealth = health;
+
         timeBtwAttack = 0f;
         startTimeBtwAttack = 0.55f;
+
         animWepIndex = weapon.animatorIndex;
         weaponDamage = weapon.damage;
         attackRange = weapon.range;
         knockbackStrength += weapon.knockback;
-        enemyLayerMask = LayerMask.GetMask("Enemy");
 
-       
     }
 
     private void Update() {
+        
         GetInput();
         IFrameControl();
-        SetAnimatorMovementParams();
         Attack();
     }
 
     private void FixedUpdate() {
         Move();
+        
     }
 
     private void GetInput() {
+
         movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+   //     if (movementInput.x < 0) movementInput.x = -1;
+   //     if (movementInput.x > 0) movementInput.x = 1;
+   //     if (movementInput.y < 0) movementInput.y = -1;
+   //     if (movementInput.y > 0) movementInput.y = 1;
+
         movementInput.Normalize();
+   //     Debug.Log(movementInput);
+   //     movement = movementInput * speed;
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         float[] distances = {
@@ -80,10 +94,10 @@ public class PlayerController : MonoBehaviour
     }
 
     private void SetAnimatorMovementParams() {
-        if (movement.magnitude > 0) {
+        
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
-        }
+        
         animator.SetFloat("Magnitude", movementInput.magnitude);
     }
 
@@ -91,6 +105,12 @@ public class PlayerController : MonoBehaviour
     {
         movement = movementInput * speed;
         rb.MovePosition(rb.position + movement * Time.fixedDeltaTime);
+            
+        if (movementInput.magnitude == 0) animator.SetBool("IsMoving", false);
+                                    else animator.SetBool("IsMoving", true);
+        
+
+        SetAnimatorMovementParams();
     }
     
     private void Attack() {
@@ -106,19 +126,19 @@ public class PlayerController : MonoBehaviour
                 switch (attackDirection)
                 {
                     case 1:
-                        StartCoroutine(SpawnAttackCircle(attackDownPos.position));
+                        StartCoroutine(SpawnAttackCircle(1));
                         animator.SetFloat("AttackDirection", 1f);
                         break;
                     case 2:
-                        StartCoroutine(SpawnAttackCircle(attackLeftPos.position));
+                        StartCoroutine(SpawnAttackCircle(2));
                         animator.SetFloat("AttackDirection", 2f);
                         break;
                     case 3:
-                        StartCoroutine(SpawnAttackCircle(attackUpPos.position));
+                        StartCoroutine(SpawnAttackCircle(3));
                         animator.SetFloat("AttackDirection", 3f);
                         break;
                     case 4:
-                        StartCoroutine(SpawnAttackCircle(attackRightPos.position));
+                        StartCoroutine(SpawnAttackCircle(4));
                         animator.SetFloat("AttackDirection", 4f);
                         break;
                     default:
@@ -135,7 +155,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetTrigger("Attack");
                 animator.SetFloat("AttackDirection", 1f);
 
-                StartCoroutine(SpawnAttackCircle(attackDownPos.position));
+                StartCoroutine(SpawnAttackCircle(1));
 
             }
 
@@ -146,7 +166,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetTrigger("Attack");
                 animator.SetFloat("AttackDirection", 2f);
 
-                StartCoroutine(SpawnAttackCircle(attackLeftPos.position));
+                StartCoroutine(SpawnAttackCircle(2));
               
             }
 
@@ -157,7 +177,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetTrigger("Attack");
                 animator.SetFloat("AttackDirection", 3f);
 
-                StartCoroutine(SpawnAttackCircle(attackUpPos.position));
+                StartCoroutine(SpawnAttackCircle(3));
 
             }
 
@@ -169,7 +189,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetFloat("AttackDirection", 4f);
 
 
-                StartCoroutine(SpawnAttackCircle(attackRightPos.position));
+                StartCoroutine(SpawnAttackCircle(4));
                 
             }
             
@@ -179,11 +199,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator SpawnAttackCircle(Vector2 position)
+    IEnumerator SpawnAttackCircle(int pos)
     {
-        yield return new WaitForSeconds(0.15f);
+        Vector2 attackPosition = Vector2.zero;
+
+        yield return new WaitForSeconds(0.25f);
+
+        if (pos == 1) attackPosition = attackDownPos.position;
+        if (pos == 2) attackPosition = attackLeftPos.position;
+        if (pos == 3) attackPosition = attackUpPos.position;
+        if (pos == 4) attackPosition = attackRightPos.position;
+
         Collider2D[] enemies = null;
-        enemies = Physics2D.OverlapCircleAll(position, attackRange, enemyLayerMask);
+        enemies = Physics2D.OverlapCircleAll(attackPosition, attackRange, enemyLayerMask);
 
         for (int i = 0; i < enemies.Length; ++i)
         {
@@ -208,6 +236,7 @@ public class PlayerController : MonoBehaviour
         if(!isInvincible) {
 
             health -= damage;
+            if (health < 0) health = 0;
             isInvincible = true;
             iFrameTime = iFrames;
 
@@ -216,9 +245,18 @@ public class PlayerController : MonoBehaviour
             Color color = rend.material.color;
             color.a = 0.5f;
             rend.material.color = color;
+
+            if(health == 0){
+                Die();
+            }
         }
         
            
+    }
+
+    private void Die() {
+        GameManager.Death();
+        Destroy(gameObject);
     }
 
     private void OnDrawGizmosSelected()

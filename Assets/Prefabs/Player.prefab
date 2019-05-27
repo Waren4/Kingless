@@ -176,7 +176,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.3}
+  m_Size: {x: 0.8, y: 1.2}
   m_EdgeRadius: 0
 --- !u!114 &2018078518
 MonoBehaviour:
@@ -294,7 +294,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   health: 100
-  iFrames: 1
+  maxHealth: 0
+  iFrames: 2
   knockbackStrength: 5
   attackUpPos: {fileID: 825675886}
   attackDownPos: {fileID: 386792336}
@@ -313,7 +314,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 20
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}

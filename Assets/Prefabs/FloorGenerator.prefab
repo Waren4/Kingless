@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &356202104806286385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 356202104806286798}
+  - component: {fileID: 356202104806286799}
+  m_Layer: 0
+  m_Name: FloorGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &356202104806286798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356202104806286385}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &356202104806286799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356202104806286385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c01934ea788b6f40b3a2faeeebbb862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  roomsD:
+  - {fileID: 8890387827707925313, guid: a3dac0ab61b36024dac6553b9e4d6f19, type: 3}
+  - {fileID: 4750818119854212568, guid: acfde6ae32ad8e14ca8f6a7201bdd38a, type: 3}
+  - {fileID: 5952469450070257553, guid: f6cae2bcd2de67b4d8c00902fbb42607, type: 3}
+  - {fileID: 5933868426090128414, guid: 6da8a6ec7cf8d874f86e2e9fbfd47d6f, type: 3}
+  - {fileID: 5933868426090128414, guid: 13cd260dac1510547b8feccd5387f9b6, type: 3}
+  - {fileID: 409867281903255724, guid: 6f4769a69c3d69a47afd672f0f8d040d, type: 3}
+  - {fileID: 3036519522742842327, guid: 8920ca4d12c49144e96c9caaaeca5149, type: 3}
+  - {fileID: 9177580760931297426, guid: c63ace9d560c9ab4ab536ca00d497cec, type: 3}
+  roomsL:
+  - {fileID: 4750818119854212568, guid: acfde6ae32ad8e14ca8f6a7201bdd38a, type: 3}
+  - {fileID: 5952469450070257553, guid: f6cae2bcd2de67b4d8c00902fbb42607, type: 3}
+  - {fileID: 5933868426090128414, guid: 6da8a6ec7cf8d874f86e2e9fbfd47d6f, type: 3}
+  - {fileID: 5933868426090128414, guid: 13cd260dac1510547b8feccd5387f9b6, type: 3}
+  - {fileID: 9199263160006356194, guid: adae6e1e368ab934ab5b2f3e3d68827a, type: 3}
+  - {fileID: 3956191407991598716, guid: 6e0ed4d71818ec8499cf3d2902ae662b, type: 3}
+  - {fileID: 4404364941725001226, guid: 08f4a2bb769a81c45bc5981fdd519365, type: 3}
+  - {fileID: 860051105117903140, guid: 35f0c4443093bd942950d2f1f59702b5, type: 3}
+  roomsU:
+  - {fileID: 5933868426090128414, guid: 6da8a6ec7cf8d874f86e2e9fbfd47d6f, type: 3}
+  - {fileID: 5933868426090128414, guid: 13cd260dac1510547b8feccd5387f9b6, type: 3}
+  - {fileID: 3036519522742842327, guid: 8920ca4d12c49144e96c9caaaeca5149, type: 3}
+  - {fileID: 9177580760931297426, guid: c63ace9d560c9ab4ab536ca00d497cec, type: 3}
+  - {fileID: 4404364941725001226, guid: 08f4a2bb769a81c45bc5981fdd519365, type: 3}
+  - {fileID: 860051105117903140, guid: 35f0c4443093bd942950d2f1f59702b5, type: 3}
+  - {fileID: 6737863030013611680, guid: bcca2dfa814dd194b8ac561f8c8af34a, type: 3}
+  - {fileID: 6737863030013611680, guid: e675b9d222bc0474ebd772e8aceac4e8, type: 3}
+  roomsR:
+  - {fileID: 5952469450070257553, guid: f6cae2bcd2de67b4d8c00902fbb42607, type: 3}
+  - {fileID: 5933868426090128414, guid: 13cd260dac1510547b8feccd5387f9b6, type: 3}
+  - {fileID: 409867281903255724, guid: 6f4769a69c3d69a47afd672f0f8d040d, type: 3}
+  - {fileID: 9177580760931297426, guid: c63ace9d560c9ab4ab536ca00d497cec, type: 3}
+  - {fileID: 3956191407991598716, guid: 6e0ed4d71818ec8499cf3d2902ae662b, type: 3}
+  - {fileID: 860051105117903140, guid: 35f0c4443093bd942950d2f1f59702b5, type: 3}
+  - {fileID: 3577661022733402486, guid: dc4a87972d1bd2741aabb8860adf350e, type: 3}
+  - {fileID: 6737863030013611680, guid: e675b9d222bc0474ebd772e8aceac4e8, type: 3}

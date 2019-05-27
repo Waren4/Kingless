@@ -52,12 +52,15 @@ public class Ghost : MonoBehaviour
         }
     }
 
+    /*
     private void OnCollisionStay2D(Collision2D col) {
         if(col.gameObject.CompareTag("Wall")){
 
             ChangeDirection();
         }
     }
+
+    */
 
     private void Move() {
         if(speed == normalSpeed) TickMoveTimer();

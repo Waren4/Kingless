@@ -15,11 +15,11 @@ public class CameraSize : MonoBehaviour
         float currentRatio = (float)Screen.width / (float)Screen.height;
 
         if (currentRatio >= desiredRatio) {
-            Camera.main.orthographicSize = targetHeight / 2f / 32f;
+            Camera.main.orthographicSize = (targetHeight / 2f / 32f ) + 0.4f;
         }
         else {
             float differenceInSize = desiredRatio / currentRatio;
-            Camera.main.orthographicSize = targetHeight / 2f / 32f * differenceInSize;
+            Camera.main.orthographicSize = (targetHeight / 2f / 32f * differenceInSize) + 0.4f;
         }
     }
 

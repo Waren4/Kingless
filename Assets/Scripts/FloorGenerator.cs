@@ -4,27 +4,22 @@ using UnityEngine;
 
 public class FloorGenerator : MonoBehaviour
 {
-    public int floorNumber = 1;
+    public static int floorNumber = 1;
 
     public Transform grid;
     public GameObject[] roomsD, roomsL, roomsU, roomsR;
 
-    
 
+    private int[] roomNumber = { 0,15,17,20,24,25,30 };
     private int numberOfRooms;
     private Queue<RoomPosition> q;
     private List<Vector2> takenPositions;
 
 
     private void Awake() {
-        switch (floorNumber)
-        {
-            case 1:
-                numberOfRooms = 15;
-                break;
-            default:
-                break;
-        }
+
+        numberOfRooms = roomNumber[floorNumber];
+
         q = new Queue<RoomPosition>();
         takenPositions = new List<Vector2>();
     }

@@ -222,7 +222,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  giveScore: 25
   enemyScript: {fileID: 652006658951327892}
+  deathAnimation: {fileID: 3726251564197106554, guid: a0107f9152bb7a84e90d2b292b91eec2,
+    type: 3}
 --- !u!61 &1626226042016593752
 BoxCollider2D:
   m_ObjectHideFlags: 0

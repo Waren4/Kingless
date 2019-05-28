@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
     public Transform attackLeftPos;
     public Transform attackRightPos;
 
+    [Header("Death Animation")]
+    public GameObject deathAnimation;
+
     private SpriteRenderer rend;
     private Rigidbody2D rb;
     private Animator animator;
@@ -96,10 +99,12 @@ public class PlayerController : MonoBehaviour
     }
 
     private void SetAnimatorMovementParams() {
-        
+
+        if (movement.magnitude > 0)
+        {
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
-        
+        }
         animator.SetFloat("Magnitude", movementInput.magnitude);
     }
 
@@ -257,6 +262,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Die() {
+        Instantiate(deathAnimation, transform.position, Quaternion.identity);
         GameManager.Death();
         Destroy(gameObject);
     }

@@ -18,6 +18,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+
+    public void StartDungeon() {
+        FloorGenerator.floorNumber = 1;
+        SceneManager.LoadScene(2);
+    }
+
     public static void NextFloor(){
         FloorGenerator.floorNumber += 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -49,7 +55,7 @@ public class GameManager : MonoBehaviour
             difficulty = 3;
             PlayerController.maxHealth = 75;
             PlayerController.damageBoost = 0;
-            Debug.Log(1);
+            
         }
     }
 

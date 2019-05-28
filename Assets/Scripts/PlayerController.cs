@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
     [Header("Death Animation")]
     public GameObject deathAnimation;
 
+    [Header("Hit Animation")]
+    public GameObject hitAnimation;
+
     private SpriteRenderer rend;
     private Rigidbody2D rb;
     private Animator animator;
@@ -255,6 +258,9 @@ public class PlayerController : MonoBehaviour
 
             if(health == 0){
                 Die();
+            }
+            else {
+                Instantiate(hitAnimation, transform.position + Vector3.up, Quaternion.identity, gameObject.transform);
             }
         }
         

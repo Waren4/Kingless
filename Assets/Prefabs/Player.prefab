@@ -302,6 +302,8 @@ MonoBehaviour:
   attackRightPos: {fileID: 1072974977}
   deathAnimation: {fileID: 527125732160543673, guid: 70d42befff9f29645b36b8de6645aaf3,
     type: 3}
+  hitAnimation: {fileID: 9061622528689041799, guid: 63b0c1959f74dae429ceb6087238109c,
+    type: 3}
 --- !u!50 &8510463694553362193
 Rigidbody2D:
   serializedVersion: 4

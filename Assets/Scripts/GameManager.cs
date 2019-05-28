@@ -34,9 +34,7 @@ public class GameManager : MonoBehaviour
     }
 
     
-
-
-
+    
     public void SetDifficulty(int dif) {
         if(dif == 1)
         {

@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public static float maxHealth = 100;
     public static int damageBoost = 0;
+    public static int roomsCleared = 0;
 
     [Header ("Player Stats")]
     public float speed;
@@ -266,6 +267,7 @@ public class PlayerController : MonoBehaviour
         
            
     }
+
 
     private void Die() {
         Instantiate(deathAnimation, transform.position, Quaternion.identity);

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    
     [Header ("Enemy Stats")]
     public int health;
     public int giveScore;
@@ -25,7 +26,6 @@ public class Enemy : MonoBehaviour
         sRenderer = gameObject.GetComponent<SpriteRenderer>();
         originalColor = sRenderer.color;
         flashTime = 0.1f;
-        
     }
 
     public void HitByPlayer(int damageTaken, float knockback, Vector2 position) {

@@ -6,9 +6,11 @@ public class FloorExit : MonoBehaviour
 {
     private PlayerController playerScript;
 
+
     private void OnTriggerEnter2D(Collider2D col) {
        if(col.CompareTag("Player")){
             GameObject.FindGameObjectWithTag("Canvas").GetComponent<FadeToBlack>().Fade();
+            PlayerController.roomsCleared = 0;
             playerScript = col.GetComponent<PlayerController>();
             playerScript.enabled = false;
             StartCoroutine(WaitForNextFloor());

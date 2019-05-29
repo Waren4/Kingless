@@ -10,6 +10,8 @@ TagManager:
   - Wall
   - Canvas
   - GameManager
+  - DungeonMusic
+  - MenuMusic
   layers:
   - Default
   - TransparentFX
@@ -27,7 +29,7 @@ TagManager:
   - HideInEditor
   - Projectile
   - Area
-  - 
+  - LowWall
   - 
   - 
   - 

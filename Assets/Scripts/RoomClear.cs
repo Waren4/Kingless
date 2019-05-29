@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoomClear : MonoBehaviour
 {
-    
+
     private GameObject enemy;
     
     void Update()
@@ -13,12 +13,13 @@ public class RoomClear : MonoBehaviour
 
             if (enemy == null)
             {
-                OpenDoors();
+                ClearRoom();
             }
         
     }
 
-    private void OpenDoors(){
+    private void ClearRoom(){
+        PlayerController.roomsCleared += 1;
         Destroy(gameObject);
     }
 }

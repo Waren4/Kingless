@@ -5,10 +5,11 @@ using UnityEngine;
 public class FloorGenerator : MonoBehaviour
 {
     public static int floorNumber = 1;
+    public static int totalRoomNumber;
 
     public Transform grid;
     public GameObject[] roomsD, roomsL, roomsU, roomsR;
-
+    
 
     private int[] roomNumber = { 0,15,17,20,24,25,30 };
     private int numberOfRooms;
@@ -19,6 +20,7 @@ public class FloorGenerator : MonoBehaviour
     private void Awake() {
 
         numberOfRooms = roomNumber[floorNumber];
+        totalRoomNumber = numberOfRooms;
 
         q = new Queue<RoomPosition>();
         takenPositions = new List<Vector2>();
@@ -90,6 +92,7 @@ public class FloorGenerator : MonoBehaviour
             }
         }
     }
+
 
 
     private void EnqueueEntryRoom() {

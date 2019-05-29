@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3499302386764822350}
   - component: {fileID: 7521101084605288027}
+  - component: {fileID: 4811499584328706465}
   m_Layer: 0
   m_Name: LUR
   m_TagString: Untagged
@@ -56,6 +57,19 @@ MonoBehaviour:
   exitUp: 1
   exitRight: 1
   position: {x: 0, y: 0}
+--- !u!114 &4811499584328706465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860051105117903140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e9afa2fcfb4c54a8f8fce754ea4c7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: {fileID: 4579947469108971093}
 --- !u!1 &974956476705125795
 GameObject:
   m_ObjectHideFlags: 0

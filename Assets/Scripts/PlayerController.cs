@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     public static int damageBoost = 0;
     public static int roomsCleared = 0;
 
+    public static PlayerController playerInstance;
+    
+
     [Header ("Player Stats")]
     public float speed;
     public float health;
@@ -40,6 +43,10 @@ public class PlayerController : MonoBehaviour
     private float iFrameTime,timeBtwAttack, startTimeBtwAttack, animWepIndex, attackRange;
 
 
+    private void Awake() {
+        DestroyOtherPlayerObjects();
+    }
+
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -60,6 +67,7 @@ public class PlayerController : MonoBehaviour
         attackRange = weapon.range;
         knockbackStrength += weapon.knockback;
 
+       
     }
 
     private void Update() {
@@ -85,6 +93,8 @@ public class PlayerController : MonoBehaviour
         movementInput.Normalize();
    //     Debug.Log(movementInput);
    //     movement = movementInput * speed;
+
+        if(cam == null) cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         float[] distances = {
@@ -230,6 +240,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
+    private void DestroyOtherPlayerObjects() {
+        if(playerInstance == null){
+            playerInstance = this;
+            DontDestroyOnLoad(playerInstance);
+        }
+        else{
+            Destroy(gameObject);
+        }
+    }
 
     private void IFrameControl(){
         if (isInvincible) {

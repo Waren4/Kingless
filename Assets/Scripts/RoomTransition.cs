@@ -18,9 +18,10 @@ public class RoomTransition : MonoBehaviour
         if(other.CompareTag("Player")) {
             switch (exitDirection)
             {
+                
                 case 1:
                     cam.transform.position -= new Vector3(0f,17f,0f);
-                    other.transform.position += new Vector3(0f, -2f, 0f);
+                    other.transform.position += new Vector3(0f, -2.5f, 0f);
                     break;
                 case 2:
                     cam.transform.position -= new Vector3(30f,0f,0f);
@@ -28,7 +29,7 @@ public class RoomTransition : MonoBehaviour
                     break;
                 case 3:
                     cam.transform.position += new Vector3(0f,17f,0f);
-                    other.transform.position += new Vector3(0f, 2f, 0f);
+                    other.transform.position += new Vector3(0f, 2.5f, 0f);
                     break;
                 case 4:
                     cam.transform.position += new Vector3(30f,0f,0f);
@@ -36,8 +37,9 @@ public class RoomTransition : MonoBehaviour
                     break;
                 default:
                     break;
+
             }
-            
+            other.GetComponent<PlayerController>().TakeDamage(0);
         }
     }
 }

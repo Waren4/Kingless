@@ -234,6 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1864049732508047654}
   - component: {fileID: 93251553055179086}
+  - component: {fileID: 1769531400349558722}
   m_Layer: 0
   m_Name: DU
   m_TagString: Untagged
@@ -280,6 +281,19 @@ MonoBehaviour:
   exitUp: 1
   exitRight: 0
   position: {x: 0, y: 0}
+--- !u!114 &1769531400349558722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3036519522742842327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e9afa2fcfb4c54a8f8fce754ea4c7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: {fileID: 9155003915693591896}
 --- !u!1 &3319730168616166910
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5719073767715145393}
   - component: {fileID: 5719073767715145394}
   - component: {fileID: 5719073767715145395}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: DungeonMusic
   m_TagString: DungeonMusic
   m_Icon: {fileID: 0}

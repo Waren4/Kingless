@@ -6008,6 +6008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1841300899}
   - component: {fileID: 2271806318455558830}
+  - component: {fileID: 7040298024533695639}
   m_Layer: 0
   m_Name: LR
   m_TagString: Untagged
@@ -6054,6 +6055,19 @@ MonoBehaviour:
   exitUp: 0
   exitRight: 1
   position: {x: 0, y: 0}
+--- !u!114 &7040298024533695639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3956191407991598716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e9afa2fcfb4c54a8f8fce754ea4c7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: {fileID: 8099275127862008224}
 --- !u!1 &5071737087908688463
 GameObject:
   m_ObjectHideFlags: 0

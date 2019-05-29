@@ -26,14 +26,19 @@ public class Generator : MonoBehaviour
         m = enemyGroups.Length;
         for(i = 0; i < n; ++i) {
             for(j = 0; j < m; ++j) {
+
                 GameObject instance;
                 instance = Instantiate(empty, new Vector3(x, y, 0), Quaternion.identity,grid.transform) as GameObject;
+
                 Instantiate(emptyRoom, new Vector3(x, y, 0), Quaternion.identity, instance.transform);
 
-                
 
-                Instantiate(rooms[i], instance.transform.position, Quaternion.identity, instance.transform);
-                Instantiate(enemyGroups[j], instance.transform.position, Quaternion.identity, instance.transform);
+
+                GameObject roomInstance = Instantiate(rooms[i], instance.transform.position, Quaternion.identity, instance.transform) as GameObject;
+
+                GameObject instanceSpawnPoint = roomInstance.GetComponent<SpawnPointTransform>().spawnPoint;
+
+                Instantiate(enemyGroups[j], instanceSpawnPoint.transform.position, Quaternion.identity, instance.transform);
 
                 x += 30;
             }

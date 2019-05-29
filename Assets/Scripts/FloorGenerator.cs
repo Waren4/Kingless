@@ -7,9 +7,14 @@ public class FloorGenerator : MonoBehaviour
     public static int floorNumber = 1;
     public static int totalRoomNumber;
 
+    [Header ("Grid")]
     public Transform grid;
+    [Header ("Empty rooms")]
     public GameObject[] roomsD, roomsL, roomsU, roomsR;
-    
+    [Header ("Room Decorations")]
+    public GameObject[] decorations;
+    [Header("Enemy Groups")]
+    public GameObject[] enemyGroups;
 
     private int[] roomNumber = { 0,15,17,20,24,25,30 };
     private int numberOfRooms;
@@ -38,6 +43,7 @@ public class FloorGenerator : MonoBehaviour
 
             int i;
             GameObject room;
+            GameObject roomInstance;
             Vector3 position;
             
 
@@ -51,7 +57,9 @@ public class FloorGenerator : MonoBehaviour
 
                     EnqueueRooms(room, rp);
 
-                    Instantiate(room, position, Quaternion.identity, grid);
+                    roomInstance = Instantiate(room, position, Quaternion.identity, grid) as GameObject;
+
+                    GenerateRandomLayout(roomInstance, position);
 
                     break;
                 case 'L':
@@ -62,7 +70,9 @@ public class FloorGenerator : MonoBehaviour
 
                     EnqueueRooms(room, rp);
 
-                    Instantiate(room, position, Quaternion.identity, grid);
+                    roomInstance = Instantiate(room, position, Quaternion.identity, grid) as GameObject;
+
+                    GenerateRandomLayout(roomInstance, position);
 
                     break;
                 case 'U':
@@ -73,7 +83,9 @@ public class FloorGenerator : MonoBehaviour
 
                     EnqueueRooms(room, rp);
 
-                    Instantiate(room, position, Quaternion.identity, grid);
+                    roomInstance = Instantiate(room, position, Quaternion.identity, grid) as GameObject;
+
+                    GenerateRandomLayout(roomInstance, position);
 
                     break;
                 case 'R':
@@ -84,7 +96,9 @@ public class FloorGenerator : MonoBehaviour
 
                     EnqueueRooms(room, rp);
 
-                    Instantiate(room, position, Quaternion.identity, grid);
+                    roomInstance = Instantiate(room, position, Quaternion.identity, grid) as GameObject;
+
+                    GenerateRandomLayout(roomInstance, position);
 
                     break;
                 default:
@@ -257,6 +271,18 @@ public class FloorGenerator : MonoBehaviour
         }
     }
 
-    
+    private void GenerateRandomLayout(GameObject parent, Vector3 position){
+        int i;
+        GameObject spawnpoint;
+        GameObject decorationsInstance;
+
+        i = Random.Range(0, decorations.Length);
+        decorationsInstance = Instantiate(decorations[i], position,Quaternion.identity,parent.transform);
+
+        spawnpoint = decorationsInstance.GetComponent<SpawnPointTransform>().spawnPoint;
+
+        i = Random.Range(0, enemyGroups.Length);
+        Instantiate(enemyGroups[i],spawnpoint.transform.position,Quaternion.identity, parent.GetComponent<EnemiesLocation>().enemies.transform);
+    }
 
 }

@@ -6259,6 +6259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1389460944089072115}
   - component: {fileID: 1835877009204184778}
+  - component: {fileID: 4130225432522059850}
   m_Layer: 0
   m_Name: DUR
   m_TagString: Untagged
@@ -6305,3 +6306,16 @@ MonoBehaviour:
   exitUp: 1
   exitRight: 1
   position: {x: 0, y: 0}
+--- !u!114 &4130225432522059850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9177580760931297426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e9afa2fcfb4c54a8f8fce754ea4c7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: {fileID: 3481777304863229572}

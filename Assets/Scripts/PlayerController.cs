@@ -281,14 +281,14 @@ public class PlayerController : MonoBehaviour
                 Die();
             }
             else {
-                Instantiate(hitAnimation, transform.position + Vector3.up, Quaternion.identity, gameObject.transform);
+                if(damage > 0)Instantiate(hitAnimation, transform.position + Vector3.up, Quaternion.identity, gameObject.transform);
             }
         }
         
            
     }
 
-
+    
     private void Die() {
         Instantiate(deathAnimation, transform.position, Quaternion.identity);
         GameManager.Death();

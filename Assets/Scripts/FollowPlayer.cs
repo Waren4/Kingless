@@ -17,6 +17,10 @@ public class FollowPlayer : MonoBehaviour
         Follow();
     }
 
+    public void GetPlayer() {
+        player = GameObject.FindGameObjectWithTag("Player");
+        offset = transform.position - player.transform.position;
+    }
     private void Follow() {
         transform.position = player.transform.position + offset;
     }

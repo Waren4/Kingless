@@ -12,6 +12,7 @@ TagManager:
   - GameManager
   - DungeonMusic
   - MenuMusic
+  - Map
   layers:
   - Default
   - TransparentFX
@@ -30,8 +31,8 @@ TagManager:
   - Projectile
   - Area
   - LowWall
-  - 
-  - 
+  - EnemyWallCollisions
+  - FloatingEnemy
   - 
   - 
   - 

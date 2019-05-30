@@ -32,7 +32,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1841300899}
+  m_Father: {fileID: 5210491576717256436}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &6396927930702349481
@@ -302,44 +302,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 4930994324978499998}
     m_ColliderPaths:
-    - - X: 20000000
-        Y: 90000000
-      - X: -20000000
-        Y: 90000000
-      - X: -20000000
-        Y: 80000000
-      - X: 20000000
-        Y: 80000000
-    - - X: 10000000
-        Y: -100000000
-      - X: 20000000
-        Y: -100000000
-      - X: 20000000
-        Y: -90000000
-      - X: -20000000
-        Y: -90000000
-      - X: -20000000
-        Y: -100000000
-      - X: -10000000
-        Y: -100000000
-      - X: -10000000
-        Y: -110000000
-      - X: 10000000
-        Y: -110000000
+    - - X: 5000000
+        Y: 5000000
+      - X: -5000000
+        Y: 5000000
+      - X: -5000000
+        Y: -5000000
+      - X: 5000000
+        Y: -5000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 2, y: 9}
-      - {x: -2, y: 9}
-      - {x: -2, y: 8}
-      - {x: 2, y: 8}
-    - - {x: 1, y: -10}
-      - {x: 2, y: -10}
-      - {x: 2, y: -9}
-      - {x: -2, y: -9}
-      - {x: -2, y: -10}
-      - {x: -1, y: -10}
-      - {x: -1, y: -11}
-      - {x: 1, y: -11}
+    - - {x: 0.5, y: 0.5}
+      - {x: -0.5, y: 0.5}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
   m_VertexDistance: 0.0005
 --- !u!1 &1314582219726344705
 GameObject:
@@ -373,7 +349,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1841300899}
+  m_Father: {fileID: 5210491576717256436}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &2938197717919435010
@@ -1717,92 +1693,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 5519084762077593936}
     m_ColliderPaths:
-    - - X: -140000000
-        Y: 60000000
-      - X: 140000000
-        Y: 60000000
-      - X: 140000000
-        Y: 0
-      - X: 150000000
-        Y: 0
-      - X: 150000000
-        Y: 80000000
-      - X: 20000000
-        Y: 80000000
-      - X: 20000000
-        Y: 90000000
-      - X: -20000000
-        Y: 90000000
-      - X: -20000000
-        Y: 80000000
-      - X: -150000000
-        Y: 80000000
-      - X: -150000000
-        Y: 0
-      - X: -140000000
-        Y: 0
-    - - X: 10000000
-        Y: -100000000
-      - X: 20000000
-        Y: -100000000
-      - X: 20000000
-        Y: -90000000
-      - X: 150000000
-        Y: -90000000
-      - X: 150000000
-        Y: -20000000
-      - X: 140000000
-        Y: -20000000
-      - X: 140000000
-        Y: -80000000
-      - X: -140000000
-        Y: -80000000
-      - X: -140000000
-        Y: -20000000
-      - X: -150000000
-        Y: -20000000
-      - X: -150000000
-        Y: -90000000
-      - X: -20000000
-        Y: -90000000
-      - X: -20000000
-        Y: -100000000
-      - X: -10000000
-        Y: -100000000
-      - X: -10000000
-        Y: -110000000
-      - X: 10000000
-        Y: -110000000
+    - - X: 5000000
+        Y: 5000000
+      - X: -5000000
+        Y: 5000000
+      - X: -5000000
+        Y: -5000000
+      - X: 5000000
+        Y: -5000000
   m_CompositePaths:
     m_Paths:
-    - - {x: -14, y: 6}
-      - {x: 14, y: 6}
-      - {x: 14, y: 0}
-      - {x: 15, y: 0}
-      - {x: 15, y: 8}
-      - {x: 2, y: 8}
-      - {x: 2, y: 9}
-      - {x: -2, y: 9}
-      - {x: -2, y: 8}
-      - {x: -15, y: 8}
-      - {x: -15, y: 0}
-      - {x: -14, y: 0}
-    - - {x: 1, y: -10}
-      - {x: 2, y: -10}
-      - {x: 2, y: -9}
-      - {x: 15, y: -9}
-      - {x: 15, y: -2}
-      - {x: 14, y: -2}
-      - {x: 14, y: -8}
-      - {x: -14, y: -8}
-      - {x: -14, y: -2}
-      - {x: -15, y: -2}
-      - {x: -15, y: -9}
-      - {x: -2, y: -9}
-      - {x: -2, y: -10}
-      - {x: -1, y: -10}
-      - {x: -1, y: -11}
-      - {x: 1, y: -11}
+    - - {x: 0.5, y: 0.5}
+      - {x: -0.5, y: 0.5}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
   m_VertexDistance: 0.0005
 --- !u!1 &2298383865505314995
 GameObject:
@@ -1833,7 +1737,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1841300899}
+  m_Father: {fileID: 5210491576717256436}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &6488673804717668064
@@ -5653,7 +5557,7 @@ Transform:
   m_Children:
   - {fileID: 8001408192694817243}
   - {fileID: 6878661305657638481}
-  m_Father: {fileID: 1841300899}
+  m_Father: {fileID: 5210491576717256436}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3794190569211556052
@@ -5689,7 +5593,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1841300899}
+  m_Father: {fileID: 5210491576717256436}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &4548949607495377393
@@ -6006,7 +5910,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1841300899}
+  - component: {fileID: 5210491576717256436}
   - component: {fileID: 2271806318455558830}
   - component: {fileID: 7040298024533695639}
   m_Layer: 0
@@ -6016,7 +5920,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1841300899
+--- !u!4 &5210491576717256436
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6237,7 +6141,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1841300899}
+  m_Father: {fileID: 5210491576717256436}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9109868404086429048
@@ -6272,7 +6176,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1841300899}
+  m_Father: {fileID: 5210491576717256436}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8438505565716645972

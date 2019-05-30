@@ -19327,11 +19327,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 3492528652756636721, guid: 887d5799bad15304ab8d354c3dc96830,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3492528652756636685, guid: 887d5799bad15304ab8d354c3dc96830,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19441,14 +19436,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1723011499}
-    - target: {fileID: 568529573, guid: 887d5799bad15304ab8d354c3dc96830, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ManagePause
-      objectReference: {fileID: 0}
-    - target: {fileID: 568529573, guid: 887d5799bad15304ab8d354c3dc96830, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 3492528652331022256}
     - target: {fileID: 1066707449, guid: 887d5799bad15304ab8d354c3dc96830, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -19465,24 +19452,8 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1723011499}
-    - target: {fileID: 637687195, guid: 887d5799bad15304ab8d354c3dc96830, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 887d5799bad15304ab8d354c3dc96830, type: 3}
---- !u!114 &3492528652331022256 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3492528652331022257, guid: 887d5799bad15304ab8d354c3dc96830,
-    type: 3}
-  m_PrefabInstance: {fileID: 3492528652331022255}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9b928b6cc1b7c14f8eb6e0fd50e90b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5719073765854773575
 PrefabInstance:
   m_ObjectHideFlags: 0

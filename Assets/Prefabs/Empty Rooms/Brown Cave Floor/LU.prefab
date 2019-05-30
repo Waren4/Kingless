@@ -32,7 +32,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6487525480290249911}
+  m_Father: {fileID: 9100419853973071221}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &3973718081037788563
@@ -302,44 +302,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 6211570500443600989}
     m_ColliderPaths:
-    - - X: 160000000
-        Y: 10000000
-      - X: 150000000
-        Y: 10000000
-      - X: 150000000
-        Y: -30000000
-      - X: 160000000
-        Y: -30000000
-    - - X: 10000000
-        Y: -100000000
-      - X: 20000000
-        Y: -100000000
-      - X: 20000000
-        Y: -90000000
-      - X: -20000000
-        Y: -90000000
-      - X: -20000000
-        Y: -100000000
-      - X: -10000000
-        Y: -100000000
-      - X: -10000000
-        Y: -110000000
-      - X: 10000000
-        Y: -110000000
+    - - X: 5000000
+        Y: 5000000
+      - X: -5000000
+        Y: 5000000
+      - X: -5000000
+        Y: -5000000
+      - X: 5000000
+        Y: -5000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 16, y: 1}
-      - {x: 15, y: 1}
-      - {x: 15, y: -3}
-      - {x: 16, y: -3}
-    - - {x: 1, y: -10}
-      - {x: 2, y: -10}
-      - {x: 2, y: -9}
-      - {x: -2, y: -9}
-      - {x: -2, y: -10}
-      - {x: -1, y: -10}
-      - {x: -1, y: -11}
-      - {x: 1, y: -11}
+    - - {x: 0.5, y: 0.5}
+      - {x: -0.5, y: 0.5}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
   m_VertexDistance: 0.0005
 --- !u!1 &626504292016066436
 GameObject:
@@ -441,7 +417,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6487525480290249911}
+  m_Father: {fileID: 9100419853973071221}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &7064867210315888694
@@ -4259,7 +4235,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6487525480290249911}
+  m_Father: {fileID: 9100419853973071221}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4264957353897315096
@@ -4295,7 +4271,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6487525480290249911}
+  m_Father: {fileID: 9100419853973071221}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &5298727399601089500
@@ -4612,7 +4588,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6487525480290249911}
+  - component: {fileID: 9100419853973071221}
   - component: {fileID: 7212613558440423357}
   - component: {fileID: 141076546058693423}
   m_Layer: 0
@@ -4622,7 +4598,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6487525480290249911
+--- !u!4 &9100419853973071221
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4777,7 +4753,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6487525480290249911}
+  m_Father: {fileID: 9100419853973071221}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &4991057578893817262
@@ -6103,92 +6079,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 9045362079328407352}
     m_ColliderPaths:
-    - - X: -140000000
-        Y: 60000000
-      - X: -10000000
-        Y: 60000000
-      - X: -10000000
-        Y: 80000000
-      - X: -150000000
-        Y: 80000000
-      - X: -150000000
-        Y: 0
-      - X: -140000000
-        Y: 0
-    - - X: 10000000
-        Y: -100000000
-      - X: 20000000
-        Y: -100000000
-      - X: 20000000
-        Y: -90000000
-      - X: 150000000
-        Y: -90000000
-      - X: 150000000
-        Y: -30000000
-      - X: 160000000
-        Y: -30000000
-      - X: 160000000
-        Y: 10000000
-      - X: 150000000
-        Y: 10000000
-      - X: 150000000
-        Y: 80000000
-      - X: 10000000
-        Y: 80000000
-      - X: 10000000
-        Y: 60000000
-      - X: 140000000
-        Y: 60000000
-      - X: 140000000
-        Y: -80000000
-      - X: -140000000
-        Y: -80000000
-      - X: -140000000
-        Y: -20000000
-      - X: -150000000
-        Y: -20000000
-      - X: -150000000
-        Y: -90000000
-      - X: -20000000
-        Y: -90000000
-      - X: -20000000
-        Y: -100000000
-      - X: -10000000
-        Y: -100000000
-      - X: -10000000
-        Y: -110000000
-      - X: 10000000
-        Y: -110000000
+    - - X: 5000000
+        Y: 5000000
+      - X: -5000000
+        Y: 5000000
+      - X: -5000000
+        Y: -5000000
+      - X: 5000000
+        Y: -5000000
   m_CompositePaths:
     m_Paths:
-    - - {x: -14, y: 6}
-      - {x: -1, y: 6}
-      - {x: -1, y: 8}
-      - {x: -15, y: 8}
-      - {x: -15, y: 0}
-      - {x: -14, y: 0}
-    - - {x: 1, y: -10}
-      - {x: 2, y: -10}
-      - {x: 2, y: -9}
-      - {x: 15, y: -9}
-      - {x: 15, y: -3}
-      - {x: 16, y: -3}
-      - {x: 16, y: 1}
-      - {x: 15, y: 1}
-      - {x: 15, y: 8}
-      - {x: 1, y: 8}
-      - {x: 1, y: 6}
-      - {x: 14, y: 6}
-      - {x: 14, y: -8}
-      - {x: -14, y: -8}
-      - {x: -14, y: -2}
-      - {x: -15, y: -2}
-      - {x: -15, y: -9}
-      - {x: -2, y: -9}
-      - {x: -2, y: -10}
-      - {x: -1, y: -10}
-      - {x: -1, y: -11}
-      - {x: 1, y: -11}
+    - - {x: 0.5, y: 0.5}
+      - {x: -0.5, y: 0.5}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
   m_VertexDistance: 0.0005
 --- !u!1 &6290976582479602916
 GameObject:
@@ -6222,7 +6126,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6487525480290249911}
+  m_Father: {fileID: 9100419853973071221}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2619044038393933446
@@ -6372,6 +6276,6 @@ Transform:
   m_Children:
   - {fileID: 5185995062808771825}
   - {fileID: 2657711328259514283}
-  m_Father: {fileID: 6487525480290249911}
+  m_Father: {fileID: 9100419853973071221}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

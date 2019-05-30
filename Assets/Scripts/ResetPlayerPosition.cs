@@ -5,12 +5,18 @@ using UnityEngine;
 public class ResetPlayerPosition : MonoBehaviour
 {
 
+    public FollowPlayer followScript;
+
     private GameObject player;
 
     void Start() {
-        player = GameObject.FindGameObjectWithTag("Player");
+        try
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
 
         player.transform.position = Vector3.zero;
+
+         followScript.GetPlayer(); } catch { };
 
         Destroy(gameObject);
         

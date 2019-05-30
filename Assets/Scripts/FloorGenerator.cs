@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FloorGenerator : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class FloorGenerator : MonoBehaviour
     private Queue<RoomPosition> q;
     private List<Vector2> takenPositions;
 
+  
 
     private void Awake() {
 
@@ -29,6 +31,8 @@ public class FloorGenerator : MonoBehaviour
 
         q = new Queue<RoomPosition>();
         takenPositions = new List<Vector2>();
+
+        
     }
 
 
@@ -58,6 +62,7 @@ public class FloorGenerator : MonoBehaviour
                     EnqueueRooms(room, rp);
 
                     roomInstance = Instantiate(room, position, Quaternion.identity, grid) as GameObject;
+                    
 
                     GenerateRandomLayout(roomInstance, position);
 
@@ -71,6 +76,7 @@ public class FloorGenerator : MonoBehaviour
                     EnqueueRooms(room, rp);
 
                     roomInstance = Instantiate(room, position, Quaternion.identity, grid) as GameObject;
+                    
 
                     GenerateRandomLayout(roomInstance, position);
 
@@ -84,6 +90,7 @@ public class FloorGenerator : MonoBehaviour
                     EnqueueRooms(room, rp);
 
                     roomInstance = Instantiate(room, position, Quaternion.identity, grid) as GameObject;
+                    
 
                     GenerateRandomLayout(roomInstance, position);
 
@@ -97,6 +104,7 @@ public class FloorGenerator : MonoBehaviour
                     EnqueueRooms(room, rp);
 
                     roomInstance = Instantiate(room, position, Quaternion.identity, grid) as GameObject;
+                    
 
                     GenerateRandomLayout(roomInstance, position);
 
@@ -285,4 +293,5 @@ public class FloorGenerator : MonoBehaviour
         Instantiate(enemyGroups[i],spawnpoint.transform.position,Quaternion.identity, parent.GetComponent<EnemiesLocation>().enemies.transform);
     }
 
+    
 }

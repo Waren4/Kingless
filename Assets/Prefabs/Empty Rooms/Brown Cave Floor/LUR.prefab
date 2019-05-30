@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3499302386764822350}
+  - component: {fileID: 7689562645425348659}
   - component: {fileID: 7521101084605288027}
   - component: {fileID: 4811499584328706465}
   m_Layer: 0
@@ -18,7 +18,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3499302386764822350
+--- !u!4 &7689562645425348659
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,7 +103,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3499302386764822350}
+  m_Father: {fileID: 7689562645425348659}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &7593912888351951787
@@ -549,7 +549,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3499302386764822350}
+  m_Father: {fileID: 7689562645425348659}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &6595912074583601268
@@ -783,32 +783,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 550566799674212678}
     m_ColliderPaths:
-    - - X: 10000000
-        Y: -100000000
-      - X: 20000000
-        Y: -100000000
-      - X: 20000000
-        Y: -90000000
-      - X: -20000000
-        Y: -90000000
-      - X: -20000000
-        Y: -100000000
-      - X: -10000000
-        Y: -100000000
-      - X: -10000000
-        Y: -110000000
-      - X: 10000000
-        Y: -110000000
+    - - X: 5000000
+        Y: 5000000
+      - X: -5000000
+        Y: 5000000
+      - X: -5000000
+        Y: -5000000
+      - X: 5000000
+        Y: -5000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 1, y: -10}
-      - {x: 2, y: -10}
-      - {x: 2, y: -9}
-      - {x: -2, y: -9}
-      - {x: -2, y: -10}
-      - {x: -1, y: -10}
-      - {x: -1, y: -11}
-      - {x: 1, y: -11}
+    - - {x: 0.5, y: 0.5}
+      - {x: -0.5, y: 0.5}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
   m_VertexDistance: 0.0005
 --- !u!1 &4579947469108971093
 GameObject:
@@ -837,7 +825,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3499302386764822350}
+  m_Father: {fileID: 7689562645425348659}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5355540976296334366
@@ -943,7 +931,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3499302386764822350}
+  m_Father: {fileID: 7689562645425348659}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &3436262388758987603
@@ -2215,92 +2203,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1631451980488397874}
     m_ColliderPaths:
-    - - X: 150000000
-        Y: 80000000
-      - X: 10000000
-        Y: 80000000
-      - X: 10000000
-        Y: 60000000
-      - X: 140000000
-        Y: 60000000
-      - X: 140000000
-        Y: 0
-      - X: 150000000
-        Y: 0
-    - - X: -140000000
-        Y: 60000000
-      - X: -10000000
-        Y: 60000000
-      - X: -10000000
-        Y: 80000000
-      - X: -150000000
-        Y: 80000000
-      - X: -150000000
-        Y: 0
-      - X: -140000000
-        Y: 0
-    - - X: 10000000
-        Y: -100000000
-      - X: 20000000
-        Y: -100000000
-      - X: 20000000
-        Y: -90000000
-      - X: 150000000
-        Y: -90000000
-      - X: 150000000
-        Y: -20000000
-      - X: 140000000
-        Y: -20000000
-      - X: 140000000
-        Y: -80000000
-      - X: -140000000
-        Y: -80000000
-      - X: -140000000
-        Y: -20000000
-      - X: -150000000
-        Y: -20000000
-      - X: -150000000
-        Y: -90000000
-      - X: -20000000
-        Y: -90000000
-      - X: -20000000
-        Y: -100000000
-      - X: -10000000
-        Y: -100000000
-      - X: -10000000
-        Y: -110000000
-      - X: 10000000
-        Y: -110000000
+    - - X: 5000000
+        Y: 5000000
+      - X: -5000000
+        Y: 5000000
+      - X: -5000000
+        Y: -5000000
+      - X: 5000000
+        Y: -5000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 15, y: 8}
-      - {x: 1, y: 8}
-      - {x: 1, y: 6}
-      - {x: 14, y: 6}
-      - {x: 14, y: 0}
-      - {x: 15, y: 0}
-    - - {x: -14, y: 6}
-      - {x: -1, y: 6}
-      - {x: -1, y: 8}
-      - {x: -15, y: 8}
-      - {x: -15, y: 0}
-      - {x: -14, y: 0}
-    - - {x: 1, y: -10}
-      - {x: 2, y: -10}
-      - {x: 2, y: -9}
-      - {x: 15, y: -9}
-      - {x: 15, y: -2}
-      - {x: 14, y: -2}
-      - {x: 14, y: -8}
-      - {x: -14, y: -8}
-      - {x: -14, y: -2}
-      - {x: -15, y: -2}
-      - {x: -15, y: -9}
-      - {x: -2, y: -9}
-      - {x: -2, y: -10}
-      - {x: -1, y: -10}
-      - {x: -1, y: -11}
-      - {x: 1, y: -11}
+    - - {x: 0.5, y: 0.5}
+      - {x: -0.5, y: 0.5}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
   m_VertexDistance: 0.0005
 --- !u!1 &6432997182168085892
 GameObject:
@@ -2332,7 +2248,7 @@ Transform:
   - {fileID: 4544581725954763626}
   - {fileID: 3155547806103372787}
   - {fileID: 3837746089038039363}
-  m_Father: {fileID: 3499302386764822350}
+  m_Father: {fileID: 7689562645425348659}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6934736851804160528
@@ -2367,7 +2283,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3499302386764822350}
+  m_Father: {fileID: 7689562645425348659}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &4045436178124720723
@@ -2588,7 +2504,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3499302386764822350}
+  m_Father: {fileID: 7689562645425348659}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &424228268117570250

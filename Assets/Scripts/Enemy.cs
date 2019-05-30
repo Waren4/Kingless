@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
 
     private void Die() {
         Instantiate(deathAnimation, transform.position, Quaternion.identity);
-        GameManager.score += giveScore;
+        GameManager.GiveScore(giveScore);
         Destroy(gameObject);
     }
 

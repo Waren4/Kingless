@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    // Order: Glow Sword Blue, ...
-    public static int[] damageValues = { 12 };
-    public static float[] ranges = { 0.85f };
-    public static float[] knockbacks = { 1f };
+    // Order: Basic Sword, Glow Sword Blue, ...
+    public static int[] damageValues = { 15, 20 };
+    public static float[] ranges = { 0.9f, 0.9f };
+    public static float[] knockbacks = { 1.5f, 1f };
 
     public float animatorIndex;
     public int damage;

@@ -103,7 +103,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1864049732508047654}
+  m_Father: {fileID: 1647454716453281614}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &4970945252455307685
@@ -232,7 +232,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1864049732508047654}
+  - component: {fileID: 1647454716453281614}
   - component: {fileID: 93251553055179086}
   - component: {fileID: 1769531400349558722}
   m_Layer: 0
@@ -242,7 +242,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1864049732508047654
+--- !u!4 &1647454716453281614
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,7 +323,7 @@ Transform:
   m_Children:
   - {fileID: 8374619870853083540}
   - {fileID: 4185660981446167682}
-  m_Father: {fileID: 1864049732508047654}
+  m_Father: {fileID: 1647454716453281614}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3515159872935421954
@@ -355,7 +355,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1864049732508047654}
+  m_Father: {fileID: 1647454716453281614}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &3514058989491837418
@@ -4178,7 +4178,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1864049732508047654}
+  m_Father: {fileID: 1647454716453281614}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &5324784631329406175
@@ -4430,32 +4430,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 6722359338162941569}
     m_ColliderPaths:
-    - - X: -150000000
-        Y: 10000000
-      - X: -160000000
-        Y: 10000000
-      - X: -160000000
-        Y: -30000000
-      - X: -150000000
-        Y: -30000000
-    - - X: 160000000
-        Y: 10000000
-      - X: 150000000
-        Y: 10000000
-      - X: 150000000
-        Y: -30000000
-      - X: 160000000
-        Y: -30000000
+    - - X: 5000000
+        Y: 5000000
+      - X: -5000000
+        Y: 5000000
+      - X: -5000000
+        Y: -5000000
+      - X: 5000000
+        Y: -5000000
   m_CompositePaths:
     m_Paths:
-    - - {x: -15, y: 1}
-      - {x: -16, y: 1}
-      - {x: -16, y: -3}
-      - {x: -15, y: -3}
-    - - {x: 16, y: 1}
-      - {x: 15, y: 1}
-      - {x: 15, y: -3}
-      - {x: 16, y: -3}
+    - - {x: 0.5, y: 0.5}
+      - {x: -0.5, y: 0.5}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
   m_VertexDistance: 0.0005
 --- !u!1 &6563513431608424625
 GameObject:
@@ -4489,7 +4477,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1864049732508047654}
+  m_Father: {fileID: 1647454716453281614}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &1126205396411266914
@@ -5797,80 +5785,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 8163060742578908818}
     m_ColliderPaths:
-    - - X: 150000000
-        Y: -30000000
-      - X: 160000000
-        Y: -30000000
-      - X: 160000000
-        Y: 10000000
-      - X: 150000000
-        Y: 10000000
-      - X: 150000000
-        Y: 80000000
-      - X: 10000000
-        Y: 80000000
-      - X: 10000000
-        Y: 60000000
-      - X: 140000000
-        Y: 60000000
-      - X: 140000000
-        Y: -80000000
-      - X: 10000000
-        Y: -80000000
-      - X: 10000000
-        Y: -90000000
-      - X: 150000000
-        Y: -90000000
-    - - X: -10000000
-        Y: -80000000
-      - X: -140000000
-        Y: -80000000
-      - X: -140000000
-        Y: 60000000
-      - X: -10000000
-        Y: 60000000
-      - X: -10000000
-        Y: 80000000
-      - X: -150000000
-        Y: 80000000
-      - X: -150000000
-        Y: 10000000
-      - X: -160000000
-        Y: 10000000
-      - X: -160000000
-        Y: -30000000
-      - X: -150000000
-        Y: -30000000
-      - X: -150000000
-        Y: -90000000
-      - X: -10000000
-        Y: -90000000
+    - - X: 5000000
+        Y: 5000000
+      - X: -5000000
+        Y: 5000000
+      - X: -5000000
+        Y: -5000000
+      - X: 5000000
+        Y: -5000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 15, y: -3}
-      - {x: 16, y: -3}
-      - {x: 16, y: 1}
-      - {x: 15, y: 1}
-      - {x: 15, y: 8}
-      - {x: 1, y: 8}
-      - {x: 1, y: 6}
-      - {x: 14, y: 6}
-      - {x: 14, y: -8}
-      - {x: 1, y: -8}
-      - {x: 1, y: -9}
-      - {x: 15, y: -9}
-    - - {x: -1, y: -8}
-      - {x: -14, y: -8}
-      - {x: -14, y: 6}
-      - {x: -1, y: 6}
-      - {x: -1, y: 8}
-      - {x: -15, y: 8}
-      - {x: -15, y: 1}
-      - {x: -16, y: 1}
-      - {x: -16, y: -3}
-      - {x: -15, y: -3}
-      - {x: -15, y: -9}
-      - {x: -1, y: -9}
+    - - {x: 0.5, y: 0.5}
+      - {x: -0.5, y: 0.5}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
   m_VertexDistance: 0.0005
 --- !u!1 &7531042459046397836
 GameObject:
@@ -5976,7 +5904,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1864049732508047654}
+  m_Father: {fileID: 1647454716453281614}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &8006694662647099868
@@ -6312,6 +6240,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1864049732508047654}
+  m_Father: {fileID: 1647454716453281614}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936156691418011174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.46, y: -1.07, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3909492786074987375}
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f9365e2e92a1040bbd75b866ed95b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 30
   giveScore: 10
   enemyScript: {fileID: 936156691418011197}
   deathAnimation: {fileID: 3726251564197106554, guid: a0107f9152bb7a84e90d2b292b91eec2,
@@ -152,8 +152,8 @@ MonoBehaviour:
   collisionDamage: 10
   attackSpeed: 0
   speed: 40
-  startTimeBtwMoves: 3
-  moveDistance: 2
+  startTimeBtwMoves: 1.2
+  moveDistance: 2.5
   color: 71
   attackDownPos: {fileID: 3909492786074987375}
   attackLeftPos: {fileID: 9083085266100813201}
@@ -403,6 +403,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2126750445279392842, guid: e4454784867677646a8e928137210be3,
         type: 3}
+      propertyPath: m_Offset.y
+      value: -0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126750445279392842, guid: e4454784867677646a8e928137210be3,
+        type: 3}
       propertyPath: m_Size.x
       value: 0.55
       objectReference: {fileID: 0}
@@ -410,11 +415,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126750445279392842, guid: e4454784867677646a8e928137210be3,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4454784867677646a8e928137210be3, type: 3}

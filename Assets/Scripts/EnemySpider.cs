@@ -39,7 +39,7 @@ public class EnemySpider : MonoBehaviour
 
 
     void Start() {
-        timeBetweenMoves = 0f;
+        timeBetweenMoves = Random.Range(1f,3f);
         timeBetweenAttacks = 0f;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();

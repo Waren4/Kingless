@@ -154,7 +154,7 @@ Transform:
   m_Children:
   - {fileID: 1900499163}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1368985570
 GameObject:
@@ -19452,6 +19452,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1723011499}
+    - target: {fileID: 692646295, guid: 887d5799bad15304ab8d354c3dc96830, type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 692646295, guid: 887d5799bad15304ab8d354c3dc96830, type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 887d5799bad15304ab8d354c3dc96830, type: 3}
 --- !u!1001 &5719073765854773575
@@ -19573,7 +19581,7 @@ PrefabInstance:
     - target: {fileID: 5975964181758912868, guid: f0287457ffce6fe479530d93f66470c0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5975964181758912868, guid: f0287457ffce6fe479530d93f66470c0,
         type: 3}

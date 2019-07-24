@@ -17,7 +17,7 @@ public class FloorGenerator : MonoBehaviour
     [Header("Enemy Groups")]
     public GameObject[] enemyGroups;
 
-    private int[] roomNumber = { 0,15,17,20,24,25,30 };
+    private int[] roomNumber = { 0,7,10,14,18,22,25,28,33,36,40 };
     private int numberOfRooms;
     private Queue<RoomPosition> q;
     private List<Vector2> takenPositions;

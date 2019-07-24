@@ -37,7 +37,7 @@ public class EnemyCaster : MonoBehaviour
 
         SetAttackPosition();
         
-        timeBtwAttacks = startTimeBtwAttacks; 
+        timeBtwAttacks = Random.Range(0.1f,1.25f); 
     }
 
 

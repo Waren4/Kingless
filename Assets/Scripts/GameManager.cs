@@ -14,12 +14,14 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(1);
         ResetPlayerHealth();
         UpdateHighscores(score);
+        GiveExperience(score / 2);
         ResetScore();
     }
 
     public void ExitToMenu() {
         SceneManager.LoadScene(0);
         UpdateHighscores(score);
+        GiveExperience(score / 2);
         ResetScore();
         DestroyPlayer();
     }
@@ -70,6 +72,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void GiveExperience(int expToGive)
+    {
+        int exp = PlayerPrefs.GetInt("Experience", 0);
+        exp += expToGive;
+        PlayerPrefs.SetInt("Experience", exp);
+    }
+
     public static void Death(){
         GameObject.FindGameObjectWithTag("Canvas").GetComponent<DropDeath>().Drop();
         
@@ -78,7 +87,7 @@ public class GameManager : MonoBehaviour
     public static void ResetPlayerHealth() {
         try
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().health = PlayerController.maxHealth;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().SetStats();
         }
         catch { };
     }
@@ -91,19 +100,19 @@ public class GameManager : MonoBehaviour
         if(dif == 1)
         {
             difficulty = 1;
-            PlayerController.maxHealth = 200;
+            PlayerController.baseHealth = 200;
             PlayerController.damageBoost = 10;
         }
         if(dif == 2)
         {
             difficulty = 2;
-            PlayerController.maxHealth = 100;
+            PlayerController.baseHealth = 100;
             PlayerController.damageBoost = 0;
         }
         if(dif == 3)
         {
             difficulty = 3;
-            PlayerController.maxHealth = 75;
+            PlayerController.baseHealth = 75;
             PlayerController.damageBoost = 0;
             
         }

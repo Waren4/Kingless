@@ -5,15 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public static float baseHealth = 100;
     public static float maxHealth = 100;
     public static int damageBoost = 0;
     public static int roomsCleared = 0;
 
     public static PlayerController playerInstance;
-    
 
     [Header ("Player Stats")]
-    public float speed;
+    public float baseSpeed;
     public float health;
     public float iFrames;
     public float knockbackStrength;
@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     private Camera cam;
     private Weapon weapon;
 
+    private float speed;
     private bool isInvincible;
     private int attackDirection,weaponDamage;
     private LayerMask enemyLayerMask;
@@ -57,16 +58,15 @@ public class PlayerController : MonoBehaviour
 
         isInvincible = false;
 
-        health = maxHealth;
 
         timeBtwAttack = 0f;
         startTimeBtwAttack = 0.55f;
 
         animWepIndex = weapon.animatorIndex;
-        weaponDamage = weapon.damage + damageBoost;
         attackRange = weapon.range;
         knockbackStrength += weapon.knockback;
 
+        SetStats();
        
     }
 
@@ -240,6 +240,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
+    public void SetStats(){
+        
+        weaponDamage = weapon.damage + damageBoost + 5*PlayerPrefs.GetInt("DamageLevel",0);
+        maxHealth = baseHealth + 10*PlayerPrefs.GetInt("HealthLevel",0);
+        health = maxHealth;
+        speed = baseSpeed + 0.5f*PlayerPrefs.GetInt("SpeedLevel",0);
+    }
 
     private void DestroyOtherPlayerObjects() {
         if(playerInstance == null){

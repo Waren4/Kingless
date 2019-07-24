@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f9365e2e92a1040bbd75b866ed95b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 30
   giveScore: 10
   enemyScript: {fileID: 1756181196}
   deathAnimation: {fileID: 3726251564197106554, guid: a0107f9152bb7a84e90d2b292b91eec2,
@@ -152,8 +152,8 @@ MonoBehaviour:
   collisionDamage: 10
   attackSpeed: 0
   speed: 40
-  startTimeBtwMoves: 3
-  moveDistance: 1
+  startTimeBtwMoves: 1
+  moveDistance: 2
   color: 82
   attackDownPos: {fileID: 2136967971001494842}
   attackLeftPos: {fileID: 3396062934738276957}

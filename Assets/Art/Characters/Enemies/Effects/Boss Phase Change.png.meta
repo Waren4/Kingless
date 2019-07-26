@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: 2a0a0573c67018241a1ef0d5ac98a9e8
+guid: 33e487a097c79ea4684fb98626ed732d
 TextureImporter:
   fileIDToRecycleName:
-    21300000: mage-bullet-13x13_0
-    21300002: mage-bullet-13x13_1
-    21300004: mage-bullet-13x13_2
-    21300006: mage-bullet-13x13_3
-    21300008: mage-bullet-13x13_4
+    21300000: Boss Phase Change_0
+    21300002: Boss Phase Change_1
+    21300004: Boss Phase Change_2
+    21300006: Boss Phase Change_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -50,7 +49,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -89,13 +88,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mage-bullet-13x13_0
+      name: Boss Phase Change_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 13
-        height: 13
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -103,19 +102,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c9d4c3024c5c2b44ac83babbfaf0e78
+      spriteID: 760319deeb997394bbd11c78bbf85388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mage-bullet-13x13_1
+      name: Boss Phase Change_1
       rect:
         serializedVersion: 2
-        x: 13
+        x: 32
         y: 0
-        width: 13
-        height: 13
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,19 +122,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a704599747f4fc42ab9327b1d6e1c02
+      spriteID: f6df5a7f574a8ec4aa48de8634dd876d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mage-bullet-13x13_2
+      name: Boss Phase Change_2
       rect:
         serializedVersion: 2
-        x: 26
+        x: 64
         y: 0
-        width: 13
-        height: 13
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,19 +142,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d6f71b0d845dad45901f448502fdbc1
+      spriteID: f3b1e536acbc30249868743fca108b93
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mage-bullet-13x13_3
+      name: Boss Phase Change_3
       rect:
         serializedVersion: 2
-        x: 39
+        x: 96
         y: 0
-        width: 13
-        height: 13
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,27 +162,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 631279793a0e12a42b3b68a0dab063e9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage-bullet-13x13_4
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 0
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07cf0f8bd1edec542af098030dc2f0e0
+      spriteID: a1e3fb5e89c5f2e4e8a60c5f3fadea1d
       vertices: []
       indices: 
       edges: []
@@ -191,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c7f28b7c6c79f7a4f9b5fe34f97724a7
+    spriteID: b910cabc84207ee41a3e787d60d8cbd2
     vertices: []
     indices: 
     edges: []

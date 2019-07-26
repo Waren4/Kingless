@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
     [Header("Hit Animation")]
     public GameObject hitAnimation;
 
+    [Header("Hit Sound")]
+    public GameObject hitSound;
+
     private SpriteRenderer rend;
     private Rigidbody2D rb;
     private Animator animator;
@@ -274,6 +277,8 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(int damage) {
         if(!isInvincible) {
 
+
+            
             health -= damage;
             if (health < 0) health = 0;
             isInvincible = true;
@@ -289,7 +294,10 @@ public class PlayerController : MonoBehaviour
                 Die();
             }
             else {
-                if(damage > 0)Instantiate(hitAnimation, transform.position + Vector3.up, Quaternion.identity, gameObject.transform);
+                if (damage > 0) {
+                    Instantiate(hitAnimation, transform.position + Vector3.up, Quaternion.identity, gameObject.transform);
+                    Instantiate(hitSound, transform.position, Quaternion.identity);
+                }
             }
         }
         

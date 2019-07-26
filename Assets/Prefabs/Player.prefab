@@ -304,6 +304,8 @@ MonoBehaviour:
     type: 3}
   hitAnimation: {fileID: 9061622528689041799, guid: 63b0c1959f74dae429ceb6087238109c,
     type: 3}
+  hitSound: {fileID: 7042382444615877061, guid: 12884ad52f13eda4ab7a0e128ea7632f,
+    type: 3}
 --- !u!50 &8510463694553362193
 Rigidbody2D:
   serializedVersion: 4

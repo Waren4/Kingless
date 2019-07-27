@@ -1215,9 +1215,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a67b5a2f565950148b03318aa7fb731b, type: 3}
-    m_FontSize: 16
-    m_FontStyle: 0
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 24
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -2704,6 +2704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 637687195}
+  expMenu: {fileID: 0}
   pauseBackground: {fileID: 551458937}
 --- !u!114 &2122953485
 MonoBehaviour:

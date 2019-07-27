@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FloorGenerator : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class FloorGenerator : MonoBehaviour
     [Header("Enemy Groups")]
     public GameObject[] enemyGroups;
 
-    private int[] roomNumber = { 0,50,10,14,18,22,25,28,33,36,40 };
+    private int[] roomNumber = { 0,6,10,14,18,22,25,28,33,36,40,45,50,54,60,63,67,70,73,77,80,85,90,95,100, 110, 115, 120, 130, 140, 150 };
     private int numberOfRooms;
     private Queue<RoomPosition> q;
     private List<Vector2> takenPositions;
@@ -26,7 +27,12 @@ public class FloorGenerator : MonoBehaviour
 
     private void Awake() {
 
-        numberOfRooms = roomNumber[floorNumber];
+        if(GameManager.mode == 2) numberOfRooms = roomNumber[floorNumber];
+        else {
+            if (floorNumber == 1) numberOfRooms = 8;
+            if (floorNumber == 2) numberOfRooms = 12;
+            if (floorNumber == 3) numberOfRooms = 15;
+        }
         totalRoomNumber = numberOfRooms;
 
         q = new Queue<RoomPosition>();

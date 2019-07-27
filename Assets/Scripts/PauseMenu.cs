@@ -32,7 +32,7 @@ public class PauseMenu : MonoBehaviour {
             pauseBackground.SetActive(false);
             Time.timeScale = 1f;
             paused = false;
-            expMenu.SetActive(false);
+            try { expMenu.SetActive(false); } catch { }
         }
     }
 }

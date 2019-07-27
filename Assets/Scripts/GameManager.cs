@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public static int score = 0;
 
+    public static int mode; 
+
     public static int difficulty = 2;
 
     public void ExitToHub() {
@@ -26,10 +28,34 @@ public class GameManager : MonoBehaviour
         DestroyPlayer();
     }
 
+    public void StartStory() {
+        SetMode(1);
+        SceneManager.LoadScene(1);
+    }
+
+    public void StartEndless() {
+        SetMode(2);
+        FloorGenerator.floorNumber = 1;
+        SceneManager.LoadScene(6);
+    }
+
+    public void RestartEndless() {
+        FloorGenerator.floorNumber = 1;
+        SceneManager.LoadScene(6);
+        ResetPlayerHealth();
+        UpdateHighscores(score);
+        GiveExperience(score / 2);
+        ResetScore();
+    }
+
 
     public void StartDungeon() {
         FloorGenerator.floorNumber = 1;
         SceneManager.LoadScene(2);
+    }
+
+    public void SetMode(int key){
+        mode = key;
     }
 
     public static void GiveScore(int addedScore) {
@@ -69,7 +95,10 @@ public class GameManager : MonoBehaviour
 
     public static void NextFloor(){
         FloorGenerator.floorNumber += 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if(mode == 2) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        else {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     public void GiveExperience(int expToGive)

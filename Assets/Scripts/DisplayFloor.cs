@@ -17,6 +17,12 @@ public class DisplayFloor : MonoBehaviour
 
     private void SetFloor()
     {
-        floorText.text = "Floor " + FloorGenerator.floorNumber.ToString();
+        if(GameManager.mode == 2) floorText.text = "Floor " + FloorGenerator.floorNumber.ToString();
+        else {
+            if (FloorGenerator.floorNumber == 1) floorText.text = "Cave";
+            if (FloorGenerator.floorNumber == 2) floorText.text = "Catacombs";
+            if (FloorGenerator.floorNumber == 3) floorText.text = "Castle";
+
+        }
     }
 }

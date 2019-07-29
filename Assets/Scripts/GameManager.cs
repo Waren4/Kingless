@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static int score = 0;
+    public static int gold = 0;
+    public static int souls = 0;
 
     public static int mode; 
 
@@ -14,18 +16,29 @@ public class GameManager : MonoBehaviour
 
     public void ExitToHub() {
         SceneManager.LoadScene(1);
+        CountDeath();
         ResetPlayerHealth();
         UpdateHighscores(score);
         GiveExperience(score / 2);
+        GiveGold(gold);
+        GiveSouls(souls);
         ResetScore();
     }
 
     public void ExitToMenu() {
         SceneManager.LoadScene(0);
+
+        /*
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        if(currentScene > 1) { 
+        CountDeath();
         UpdateHighscores(score);
         GiveExperience(score / 2);
+        
+        } */
         ResetScore();
         DestroyPlayer();
+
     }
 
     public void StartStory() {
@@ -64,6 +77,8 @@ public class GameManager : MonoBehaviour
 
     public static void ResetScore(){
         score = 0;
+        gold = 0;
+        souls = 0;
     }
 
     public static void UpdateHighscores(int scoreAchieved){
@@ -106,6 +121,26 @@ public class GameManager : MonoBehaviour
         int exp = PlayerPrefs.GetInt("Experience", 0);
         exp += expToGive;
         PlayerPrefs.SetInt("Experience", exp);
+    }
+
+    public void GiveGold(int goldToGive)
+    {
+        int g = PlayerPrefs.GetInt("Gold", 0);
+        g += goldToGive;
+        PlayerPrefs.SetInt("Gold", g);
+    }
+
+    public void GiveSouls(int soulsToGive)
+    {
+        int s = PlayerPrefs.GetInt("Souls", 0);
+        s += soulsToGive;
+        PlayerPrefs.SetInt("Souls", s);
+    }
+
+    public void CountDeath(){
+        int number = PlayerPrefs.GetInt("Deaths", 0);
+        number++;
+        PlayerPrefs.SetInt("Deaths", number);
     }
 
     public static void Death(){

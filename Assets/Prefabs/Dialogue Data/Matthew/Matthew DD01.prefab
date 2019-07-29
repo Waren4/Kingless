@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5376780758475218294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3188887737337600155}
+  - component: {fileID: 6337213789407215736}
+  m_Layer: 0
+  m_Name: Matthew DD01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3188887737337600155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5376780758475218294}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6337213789407215736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5376780758475218294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 467263a831494264ca6c3763bb7adb11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Matthew
+  numberOfPhrases: 10
+  phrases:
+  - 'Oh my! You scared me, my lord. I''m not used to seeing skeletons around town.  '
+  - 'What happened to you?  '
+  - . . .
+  - Right, I guess you can't speak now, apologies.
+  - 'I''m Matthew, the mayor''s son. I don''t know what could possibly have turned
+    you into a skeleton, but I''ve seen someone who might. '
+  - 'For the past few days, a strange masked man has been standing near the pond in
+    our village. He seems really unusual and not the kind of folk you expect to see
+    around these parts. '
+  - 'No one has talked to him yet, we are all minding our own business around here.
+    I would be careful around him though, sometimes there are purple things shining
+    in his pockets. Very weird. '
+  - 'Anyway, I might be able to help you a little. Sometimes I sell things that I
+    find while working the fields. You wouldn''t believe what kinds of things people
+    leave burried in the crops. '
+  - 'I have nothing on me now, but another day I might have something to sell to you,
+    my lord. Of course, you would receive a Royalty discount.  '
+  - I wish you good luck, your majesty! You need to get back to the throne. Life is
+    already hard enough, living without a ruler to fight for our people would be even
+    harder.

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9217310920442102964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1753162321929746320}
+  - component: {fileID: 8378131280222749274}
+  m_Layer: 0
+  m_Name: Imp DD01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1753162321929746320
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9217310920442102964}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8378131280222749274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9217310920442102964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 467263a831494264ca6c3763bb7adb11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Helpful Imp
+  numberOfPhrases: 6
+  phrases:
+  - Hello sire
+  - You seem to have gotten yourself in quite the pickle.
+  - ' Wait, wait! Put the sword down, I can help you. I''ve defected the evil forces
+    and now live in this graveyard.'
+  - 'I don''t know the details, but the world now revolves around you. People might
+    find different things to say to you if you get stronger, for example. '
+  - 'Before I escaped from the other imps, I read an inscription on a magical tablet.
+    It read: "The king can press ESC to acces the Level Up Menu from which he can
+    become stronger if he has accumulated enough experience" '
+  - 'I''m just as confused as you are, but you are a clever king. I''m sure you''ll
+    figure it out. It also said you can "press E" to stop talking to people. Whatever
+    that means. '

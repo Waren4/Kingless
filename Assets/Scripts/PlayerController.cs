@@ -17,7 +17,9 @@ public class PlayerController : MonoBehaviour
     public float health;
     public float iFrames;
     public float knockbackStrength;
-    
+    public float dashCooldown;
+    public float dashSpeed;
+
     [Header ("Attack Positions")]
     public Transform attackUpPos;
     public Transform attackDownPos;
@@ -44,7 +46,7 @@ public class PlayerController : MonoBehaviour
     private int attackDirection,weaponDamage;
     private LayerMask enemyLayerMask;
     private Vector2 mousePos, movementInput, movement;
-    private float iFrameTime,timeBtwAttack, startTimeBtwAttack, animWepIndex, attackRange;
+    private float iFrameTime,timeBtwAttack, startTimeBtwAttack, animWepIndex, attackRange, timeUntilDash;
 
 
     private void Awake() {
@@ -82,7 +84,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate() {
         Move();
-        
+        Dash();
     }
 
     private void GetInput() {
@@ -137,6 +139,18 @@ public class PlayerController : MonoBehaviour
         SetAnimatorMovementParams();
     }
     
+    private void Dash() {
+
+        if (timeUntilDash > 0f) timeUntilDash -= Time.deltaTime;
+
+        if (movementInput.magnitude != 0) {
+            if(timeUntilDash <= 0f && Input.GetAxis("Jump") != 0f) {
+                StartCoroutine(IncreaseSpeed());
+                timeUntilDash = dashCooldown;
+            } 
+        }
+    }
+
     private void Attack() {
         if (timeBtwAttack <= 0f) {
             bool attacked = false;
@@ -221,6 +235,12 @@ public class PlayerController : MonoBehaviour
         else {
             timeBtwAttack -= Time.deltaTime;
         }
+    }
+
+    IEnumerator IncreaseSpeed() {
+        speed += dashSpeed;
+        yield return new WaitForSeconds(0.225f);
+        speed -= dashSpeed;
     }
 
     IEnumerator SpawnAttackCircle(int pos)

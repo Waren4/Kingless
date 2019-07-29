@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 4017326321292609050}
   - component: {fileID: 4017326321292609126}
   - component: {fileID: 4017326321292609049}
+  - component: {fileID: 7434551501935399751}
   - component: {fileID: 4017326321292609048}
   - component: {fileID: 953565444}
   - component: {fileID: 8586399144757488566}
@@ -155,6 +156,32 @@ MonoBehaviour:
   enemyScript: {fileID: 0}
   deathAnimation: {fileID: 3726251564197106554, guid: a0107f9152bb7a84e90d2b292b91eec2,
     type: 3}
+--- !u!114 &7434551501935399751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4017326321292609053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d57858c31d4c1440bc3d9909a57dd41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soul: {fileID: 4508541336148213698, guid: dc0d5232ca2343c469eac1296036ae30, type: 3}
+  coin: {fileID: 4251451204214099338, guid: c7b14bb8fb58d264a8ee6bc8a9ef0104, type: 3}
+  coinRange1: 0.35
+  coinRange2: 0.9
+  coinNumber1: 1
+  coinNumber2: 2
+  coinNumber3: 3
+  soulRange1: 0.25
+  soulRange2: 0.75
+  soulNumber1: 0
+  soulNumber2: 0
+  soulNumber3: 1
+  dropX: 1
+  dropY: 1
 --- !u!114 &4017326321292609048
 MonoBehaviour:
   m_ObjectHideFlags: 0

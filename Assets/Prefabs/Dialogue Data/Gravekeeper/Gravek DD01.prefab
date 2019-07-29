@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9147995572705168671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4879264537990650196}
+  - component: {fileID: 3391389647369001698}
+  m_Layer: 0
+  m_Name: Gravek DD01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4879264537990650196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9147995572705168671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3391389647369001698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9147995572705168671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 467263a831494264ca6c3763bb7adb11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Gravekeeper
+  numberOfPhrases: 7
+  phrases:
+  - 'Oh my God! It''s you, my lord, in my graveyard! Praise be!  '
+  - '*The gravekeeper kneels in front of you*'
+  - 'You seem confused, your majesty. I''m just happy to see you. Even though you
+    have lost all your flesh, there is no way I wouldn''t recognise your crown and
+    shiny armor. '
+  - 'You''re so silent, your majesty... Wait, I guess skeletons don''t have vocal
+    chords. '
+  - 'I am but a lowly gravekeeper and I tend to this graveyard. I can''t help you
+    with much, but people in the village might. If you go south from here, you''ll
+    find the village. '
+  - 'There is also a dangerous cave to the east. Rumors say it leads into your castle''s
+    basement, but no one has ever dared to enter it. You should visit our village,
+    people would be very happy! '
+  - ' I wish you good luck in all your endeavors, your majesty.'

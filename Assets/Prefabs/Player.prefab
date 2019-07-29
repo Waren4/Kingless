@@ -294,8 +294,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseSpeed: 7
   health: 100
-  iFrames: 2
+  iFrames: 1.2
   knockbackStrength: 5
+  dashCooldown: 2
+  dashSpeed: 6
   attackUpPos: {fileID: 825675886}
   attackDownPos: {fileID: 386792336}
   attackLeftPos: {fileID: 1404783896}

@@ -44,30 +44,35 @@ public class Dialogue : MonoBehaviour
                     EndDialogue();
                 }
             }
-            else wait -= Time.deltaTime;
         }
+
+        if (wait > 0f) wait -= Time.deltaTime;
     }
 
     public void StartDialogue() {
 
         Debug.Log(1);
 
-        wait = 1f;
+        if (wait <= 0f)
+        {
+            wait = 1f;
 
-        playerScript.enabled = false;
-        dialogueBox.SetActive(true);
-        inDialogue = true;
+            playerScript.enabled = false;
+            dialogueBox.SetActive(true);
+            inDialogue = true;
 
-        character = dialogueData.characterName;
-        number = dialogueData.numberOfPhrases;
-        for (int i = 0; i < number; ++i) phrases[i] = dialogueData.phrases[i];
+            character = dialogueData.characterName;
+            number = dialogueData.numberOfPhrases;
+            for (int i = 0; i < number; ++i) phrases[i] = dialogueData.phrases[i];
 
-        currentPhrase = 0;
-        speechText.text = phrases[currentPhrase];
-        nameText.text = character;
+            currentPhrase = 0;
+            speechText.text = phrases[currentPhrase];
+            nameText.text = character;
+        }
     }
 
     public void EndDialogue() {
+        wait = 0.5f;
         playerScript.enabled = true;
         dialogueBox.SetActive(false);
         inDialogue = false;

@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3775158778461022478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659384097889205573}
+  - component: {fileID: 7314014584504860403}
+  m_Layer: 0
+  m_Name: Gravek DD04
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &659384097889205573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3775158778461022478}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7314014584504860403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3775158778461022478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 467263a831494264ca6c3763bb7adb11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Gravekeeper
+  numberOfPhrases: 5
+  phrases:
+  - I'm sure you've met the green imp in the graveyard by now. He's a weird one.
+  - 'We have scary stories to tell to kids about imps so they listen to us, but actually
+    meeting an imp like that one kind of contradicts all of them. '
+  - 'When he first appeared, I tried to chase him one, but he''s very quick, so I
+    eventually gave up and tried talking to him. '
+  - 'His stories are sort of interesting, even though I don''t understand most of
+    what he says. It makes my life less dull listening to his fantastical tales like
+    going to "Demon School". '
+  - 'Though his voice gets annoying eventually so I usually don''t spend that much
+    time talking to him and just tell him to catch some rats, which also happen to
+    be his favorite food. '

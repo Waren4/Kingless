@@ -160,10 +160,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1293149610488765297}
   - component: {fileID: 1293149610488765295}
+  - component: {fileID: 1293149610488765293}
+  - component: {fileID: 778522200837204470}
   - component: {fileID: 1293149610488765296}
   - component: {fileID: 1293149610488765294}
   - component: {fileID: 1293149610488765292}
-  - component: {fileID: 1293149610488765293}
   - component: {fileID: 1293149610488765291}
   m_Layer: 8
   m_Name: Final Boss
@@ -243,6 +244,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1293149610488765293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293149610488765298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f9365e2e92a1040bbd75b866ed95b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 200
+  giveScore: 3000
+  enemyScript: {fileID: 1293149610488765294}
+  deathAnimation: {fileID: 3726251564197106554, guid: 3b681f0fd1a86f54da94277c83ce03a9,
+    type: 3}
+--- !u!114 &778522200837204470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293149610488765298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d57858c31d4c1440bc3d9909a57dd41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soul: {fileID: 4508541336148213698, guid: dc0d5232ca2343c469eac1296036ae30, type: 3}
+  coin: {fileID: 4251451204214099338, guid: c7b14bb8fb58d264a8ee6bc8a9ef0104, type: 3}
+  coinRange1: 0
+  coinRange2: 0.9
+  coinNumber1: 0
+  coinNumber2: 0
+  coinNumber3: 0
+  soulRange1: 0.25
+  soulRange2: 0.5
+  soulNumber1: 1
+  soulNumber2: 2
+  soulNumber3: 3
+  dropX: 1
+  dropY: 1
 --- !u!95 &1293149610488765296
 Animator:
   serializedVersion: 3
@@ -320,23 +364,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &1293149610488765293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293149610488765298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7f9365e2e92a1040bbd75b866ed95b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 200
-  giveScore: 3000
-  enemyScript: {fileID: 1293149610488765294}
-  deathAnimation: {fileID: 3726251564197106554, guid: 3b681f0fd1a86f54da94277c83ce03a9,
-    type: 3}
 --- !u!60 &1293149610488765291
 PolygonCollider2D:
   m_ObjectHideFlags: 0

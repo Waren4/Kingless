@@ -18,12 +18,15 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sRenderer;
     private Color originalColor;
+    private DropPickups dropScript;
 
     private float flashTime;
-
+    
     private void Start() {
         rb = gameObject.GetComponent<Rigidbody2D>();
         sRenderer = gameObject.GetComponent<SpriteRenderer>();
+        dropScript = GetComponent<DropPickups>();
+
         originalColor = sRenderer.color;
         flashTime = 0.1f;
     }
@@ -49,14 +52,21 @@ public class Enemy : MonoBehaviour
 
     private void FlashOnHit() {
         sRenderer.color = Color.red;
+        Color color = sRenderer.material.color;
+        color.a = 0.5f;
+        sRenderer.material.color = color;
         Invoke("ResetColor", flashTime);
     }
 
     private void ResetColor() {
         sRenderer.color = originalColor;
+        Color color = sRenderer.material.color;
+        color.a = 1f;
+        sRenderer.material.color = color;
     }
 
     private void Die() {
+        dropScript.DropItems();
         Instantiate(deathAnimation, transform.position, Quaternion.identity);
         GameManager.GiveScore(giveScore);
         Destroy(gameObject);

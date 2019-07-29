@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4770550413642275570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1919686930676625356}
+  - component: {fileID: 720991235171451768}
+  m_Layer: 0
+  m_Name: SM DD03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1919686930676625356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4770550413642275570}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &720991235171451768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4770550413642275570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 467263a831494264ca6c3763bb7adb11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Strange Man
+  numberOfPhrases: 11
+  phrases:
+  - A fine job once again. You're now mathematically twice as successful as the last
+    time we spoke.
+  - We both know you failed in saving the kingdom again, however.
+  - Don't look at me that way with that vacant skull of yours. Tsk, it's no different
+    from before. Yes, the kingdom needs saving, you think that cave filled with monsters
+    was always there?
+  - 'Doesn''t the very notion of it baffle you? A cave leading to your mighty household
+    that you did not know about?  '
+  - You always thought yourself to be more knowledgeable than you actually were, but
+    a cave leading into the castle? There is no way you wouldn't have known about
+    it if it existed.
+  - And that's exactly my point. It didn't. It's part of your curse. The wizard who
+    put you under it must have a pretty wicked sense of humor, forcing you to deal
+    with hordes of monsters in order to reach your throne.
+  - 'He''s probably waiting there for you as well, to laugh in your face or something.
+    Hahaha. '
+  - You would deserve that.
+  - But keep bringing me souls and you might deserve some real praise as well, unlike
+    the false one you're used to, "your majesty".
+  - 'Next time I''ll need three souls. '
+  - I'm looking forward to next step in our... cooperation. Hahahaha.

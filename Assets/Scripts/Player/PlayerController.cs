@@ -26,6 +26,9 @@ public class PlayerController : MonoBehaviour
     public Transform attackLeftPos;
     public Transform attackRightPos;
 
+    [Header("Dash Animation")]
+    public GameObject dashAnimation;
+
     [Header("Death Animation")]
     public GameObject deathAnimation;
 
@@ -47,7 +50,7 @@ public class PlayerController : MonoBehaviour
     private LayerMask enemyLayerMask;
     private Vector2 mousePos, movementInput, movement;
     private float iFrameTime,timeBtwAttack, startTimeBtwAttack, animWepIndex, attackRange, timeUntilDash;
-
+    private Vector3 dashRotation;
 
     private void Awake() {
         DestroyOtherPlayerObjects();
@@ -87,9 +90,16 @@ public class PlayerController : MonoBehaviour
         Dash();
     }
 
+    private void OnLevelWasLoaded(int level) {
+        if (level > 1) {
+            if (cam == null) cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        }
+    }
+
     private void GetInput() {
 
         movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        SetDashAnimationRotation();
    //     if (movementInput.x < 0) movementInput.x = -1;
    //     if (movementInput.x > 0) movementInput.x = 1;
    //     if (movementInput.y < 0) movementInput.y = -1;
@@ -99,7 +109,7 @@ public class PlayerController : MonoBehaviour
    //     Debug.Log(movementInput);
    //     movement = movementInput * speed;
 
-        if(cam == null) cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         float[] distances = {
@@ -145,10 +155,24 @@ public class PlayerController : MonoBehaviour
 
         if (movementInput.magnitude != 0) {
             if(timeUntilDash <= 0f && Input.GetAxis("Jump") != 0f) {
+               // SetDashAnimationRotation();
+                Debug.Log(movementInput);
                 StartCoroutine(IncreaseSpeed());
+                Instantiate(dashAnimation, transform.position+Vector3.down, Quaternion.Euler(dashRotation));
                 timeUntilDash = dashCooldown;
             } 
         }
+    }
+
+    private void SetDashAnimationRotation() {
+        if (movementInput.x == -1f && movementInput.y == -1f) dashRotation = new Vector3(0f, 0f, 5f);
+        if (movementInput.x == 0f && movementInput.y == -1f) dashRotation = new Vector3(0f, 0f, 50f);
+        if (movementInput.x == 1f && movementInput.y == -1f) dashRotation = new Vector3(0f, 0f, 95f);
+        if (movementInput.x == 1f && movementInput.y == 0f) dashRotation = new Vector3(0f, 0f, 140f);
+        if (movementInput.x == 1f && movementInput.y == 1f) dashRotation = new Vector3(0f, 0f, 185f);
+        if (movementInput.x == 0f && movementInput.y == 1f) dashRotation = new Vector3(0f, 0f, 230f);
+        if (movementInput.x == -1f && movementInput.y == 1f) dashRotation = new Vector3(0f, 0f, 275f);
+        if (movementInput.x == -1f && movementInput.y == 0f) dashRotation = new Vector3(0f, 0f, 320f);
     }
 
     private void Attack() {

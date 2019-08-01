@@ -5454,6 +5454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8857477136797374172}
+  - component: {fileID: 4305279814874243365}
   m_Layer: 0
   m_Name: Entry Room
   m_TagString: Untagged
@@ -5478,3 +5479,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4305279814874243365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8857477136797374175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5233cf1ab0a5b645b5e48e696d82a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exitNumber: 4
+  exitDown: 1
+  exitLeft: 1
+  exitUp: 1
+  exitRight: 1

@@ -7,19 +7,16 @@ public class Room : MonoBehaviour
 {
     public int exitNumber;
     public bool exitDown, exitLeft, exitUp, exitRight;
-    public Vector2 position;
+    //   public Vector2 position;
 
-    private string roomCode;
-//    public GameObject blockDownDoor, blockLeftDoor, blockUpDoor, blockRightDoor;
+
+    private Map mapScript;
 
     private void Start()
     {
+        mapScript = GameObject.FindGameObjectWithTag("Map").GetComponent<Map>();
 
-        roomCode = gameObject.name;
-      //  blockDownDoor.SetActive(false);
-       // blockLeftDoor.SetActive(false);
-        //blockRightDoor.SetActive(false);
-       // blockUpDoor.SetActive(false);
+        mapScript.GetRoom(this, transform.position.x, transform.position.y);
     }
 
 }

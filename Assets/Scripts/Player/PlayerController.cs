@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
 
     private float speed;
     private bool isInvincible;
+    private bool canDash;
     private int attackDirection,weaponDamage;
     private LayerMask enemyLayerMask;
     private Vector2 mousePos, movementInput, movement;
@@ -75,7 +76,7 @@ public class PlayerController : MonoBehaviour
         knockbackStrength += weapon.knockback;
 
         SetStats();
-       
+        SetDash();
     }
 
     private void Update() {
@@ -87,14 +88,9 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate() {
         Move();
-        Dash();
+        if(canDash) Dash();
     }
 
-    private void OnLevelWasLoaded(int level) {
-        if (level > 1) {
-            if (cam == null) cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        }
-    }
 
     private void GetInput() {
 
@@ -106,10 +102,10 @@ public class PlayerController : MonoBehaviour
    //     if (movementInput.y > 0) movementInput.y = 1;
 
         movementInput.Normalize();
-   //     Debug.Log(movementInput);
-   //     movement = movementInput * speed;
+        //     Debug.Log(movementInput);
+        //     movement = movementInput * speed;
 
-        
+        if (cam == null) cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         float[] distances = {
@@ -125,6 +121,11 @@ public class PlayerController : MonoBehaviour
                 minDistance = distances[i];
                 attackDirection = i + 1;
             }
+    }
+
+    public void SetDash() {
+        if (PlayerPrefs.GetInt("HasDash", 0) == 1) canDash = true;
+        else canDash = false;
     }
 
     private void SetAnimatorMovementParams() {
@@ -156,7 +157,6 @@ public class PlayerController : MonoBehaviour
         if (movementInput.magnitude != 0) {
             if(timeUntilDash <= 0f && Input.GetAxis("Jump") != 0f) {
                // SetDashAnimationRotation();
-                Debug.Log(movementInput);
                 StartCoroutine(IncreaseSpeed());
                 Instantiate(dashAnimation, transform.position+Vector3.down, Quaternion.Euler(dashRotation));
                 timeUntilDash = dashCooldown;

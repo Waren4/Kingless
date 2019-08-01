@@ -44,7 +44,7 @@ public class Dialogue : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    Debug.Log(2);
+                    
                     EndDialogue();
                 }
             }
@@ -55,7 +55,7 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue() {
 
-        Debug.Log(1);
+        
 
         if (wait <= 0f)
         {

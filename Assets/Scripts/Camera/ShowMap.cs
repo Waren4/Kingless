@@ -12,6 +12,7 @@ public class ShowMap : MonoBehaviour
     private PlayerController playerScript;
 
     private bool showingMap;
+    private bool hasMap;
 
     private void Start() {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -22,12 +23,19 @@ public class ShowMap : MonoBehaviour
         mapLocation = GameObject.FindGameObjectWithTag("Map").transform;
         offset = new Vector3(20f, -11.25f, -10f);
         showingMap = false;
+
+        if (PlayerPrefs.GetInt("HasMap", 0) == 1) hasMap = true;
+        else hasMap = false;
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Tab)) {
-            ManageMap(showingMap);
+        if (hasMap)
+        {
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                ManageMap(showingMap);
+            }
         }
     }
 
@@ -48,4 +56,5 @@ public class ShowMap : MonoBehaviour
             showingMap = true;
         }
     }
+
 }

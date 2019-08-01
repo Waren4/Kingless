@@ -337,177 +337,6 @@ PrefabInstance:
       objectReference: {fileID: 4687797353538551103}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0287457ffce6fe479530d93f66470c0, type: 3}
---- !u!1001 &1095320487
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7430900197535054387, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: m_Name
-      value: Matthew
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054390, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054390, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -45.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054390, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054390, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054390, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054390, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054390, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054390, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054390, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054390, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054390, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054388, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: dialogueScript
-      value: 
-      objectReference: {fileID: 787266820}
-    - target: {fileID: 7430900197535054391, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300004, guid: 174ae2833d5b3624881fe32378a3dc14,
-        type: 3}
-    - target: {fileID: 7430900197535054389, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: phrases.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054389, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: characterName
-      value: Matthew
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054389, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: numberOfPhrases
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054389, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: phrases.Array.data[1]
-      value: 'What happened to you?  '
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054389, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: phrases.Array.data[2]
-      value: . . .
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054389, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: phrases.Array.data[3]
-      value: Right, I guess you can't speak now, apologies.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054389, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: phrases.Array.data[4]
-      value: 'I''m Matthew, the mayor''s son. I don''t know what could possibly have
-        turned you into a skeleton, but I''ve seen someone who might. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054389, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: phrases.Array.data[5]
-      value: 'For the past few days, a strange masked man has been standing near the
-        pond in our village. He seems really unusual and not the kind of folk you
-        expect to see around these parts. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054389, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: phrases.Array.data[6]
-      value: 'No one has talked to him yet, we are all minding our own business around
-        here. I would be careful around him though, sometimes there are purple things
-        shining in his pockets. Very weird. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054389, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: phrases.Array.data[0]
-      value: 'Oh my! You scared me, my lord. I''m not used to seeing skeletons around
-        town.  '
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054389, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: phrases.Array.data[7]
-      value: 'Anyway, I might be able to help you a little. Sometimes I sell things
-        that I find while working the fields. You wouldn''t believe what kinds of
-        things people leave burried in the crops. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054389, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: phrases.Array.data[8]
-      value: 'I have nothing on me now, but another day I might have something to
-        sell to you, my lord. Of course, you would receive a Royalty discount.  '
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197535054389, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: phrases.Array.data[9]
-      value: I wish you good luck, your majesty! You need to get back to the throne.
-        Life is already hard enough, living without a ruler to fight for our people
-        would be even harder.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197728298069, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197728298068, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430900197728298068, guid: 1eae34f413505674e90b9d1780304e0f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1eae34f413505674e90b9d1780304e0f, type: 3}
 --- !u!1 &1586002042
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,12 +829,123 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 262222926, guid: b7e165e165f1a6843a951db0c0640a98, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 2072263758985512959, guid: b7e165e165f1a6843a951db0c0640a98,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2072263758985512959, guid: b7e165e165f1a6843a951db0c0640a98,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945315519295756065, guid: b7e165e165f1a6843a951db0c0640a98,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945315519295756065, guid: b7e165e165f1a6843a951db0c0640a98,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5836505696036638623, guid: b7e165e165f1a6843a951db0c0640a98,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7430900196440914326}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7e165e165f1a6843a951db0c0640a98, type: 3}
+--- !u!1 &5121247416979579904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6513995482800083701, guid: b7e165e165f1a6843a951db0c0640a98,
+    type: 3}
+  m_PrefabInstance: {fileID: 5121247416979579899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5261690857904054242
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3322138849139172982, guid: 9c1b29f5c3c55ef4198256da47e73be4,
+        type: 3}
+      propertyPath: m_Name
+      value: Matthew
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322138849139172979, guid: 9c1b29f5c3c55ef4198256da47e73be4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322138849139172979, guid: 9c1b29f5c3c55ef4198256da47e73be4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -45.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322138849139172979, guid: 9c1b29f5c3c55ef4198256da47e73be4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322138849139172979, guid: 9c1b29f5c3c55ef4198256da47e73be4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322138849139172979, guid: 9c1b29f5c3c55ef4198256da47e73be4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322138849139172979, guid: 9c1b29f5c3c55ef4198256da47e73be4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322138849139172979, guid: 9c1b29f5c3c55ef4198256da47e73be4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322138849139172979, guid: 9c1b29f5c3c55ef4198256da47e73be4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322138849139172979, guid: 9c1b29f5c3c55ef4198256da47e73be4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322138849139172979, guid: 9c1b29f5c3c55ef4198256da47e73be4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322138849139172979, guid: 9c1b29f5c3c55ef4198256da47e73be4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322138849139172977, guid: 9c1b29f5c3c55ef4198256da47e73be4,
+        type: 3}
+      propertyPath: dialogueScript
+      value: 
+      objectReference: {fileID: 787266820}
+    - target: {fileID: 3322138849139172980, guid: 9c1b29f5c3c55ef4198256da47e73be4,
+        type: 3}
+      propertyPath: dialogueScript
+      value: 
+      objectReference: {fileID: 787266820}
+    - target: {fileID: 3322138849139172980, guid: 9c1b29f5c3c55ef4198256da47e73be4,
+        type: 3}
+      propertyPath: shop
+      value: 
+      objectReference: {fileID: 5121247416979579904}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9c1b29f5c3c55ef4198256da47e73be4, type: 3}
 --- !u!1001 &5648224879049013665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1080,6 +1020,18 @@ PrefabInstance:
       objectReference: {fileID: 787266820}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d44e9025c2af8024ba18e43a84d47888, type: 3}
+--- !u!114 &7430900196440914326 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3322138849139172980, guid: 9c1b29f5c3c55ef4198256da47e73be4,
+    type: 3}
+  m_PrefabInstance: {fileID: 5261690857904054242}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1e6e519e7739e4a8c829064ca89be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7537606582304443466
 PrefabInstance:
   m_ObjectHideFlags: 0

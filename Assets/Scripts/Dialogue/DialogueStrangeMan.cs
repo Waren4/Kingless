@@ -34,7 +34,7 @@ public class DialogueStrangeMan : MonoBehaviour
         soulLevel = PlayerPrefs.GetInt("SoulLevel", 0);
         soulsNumber = PlayerPrefs.GetInt("Souls", 0);
 
-        Debug.Log(soulsToPay[soulLevel]);
+
 
         SetData();
     }

@@ -302,6 +302,8 @@ MonoBehaviour:
   attackDownPos: {fileID: 386792336}
   attackLeftPos: {fileID: 1404783896}
   attackRightPos: {fileID: 1072974977}
+  dashAnimation: {fileID: 7200538345100318860, guid: 7e66b30af5e6d7e469a46488a4895969,
+    type: 3}
   deathAnimation: {fileID: 527125732160543673, guid: 70d42befff9f29645b36b8de6645aaf3,
     type: 3}
   hitAnimation: {fileID: 9061622528689041799, guid: 63b0c1959f74dae429ceb6087238109c,

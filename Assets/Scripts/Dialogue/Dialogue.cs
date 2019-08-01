@@ -24,10 +24,14 @@ public class Dialogue : MonoBehaviour
     private string character;
     private string[] phrases = new string[20];
 
+    private GameObject player;
     private PlayerController playerScript;
+    private Animator playerAnimator;
 
     private void Start() {
-        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerScript = player.GetComponent<PlayerController>();
+        playerAnimator = player.GetComponent<Animator>();
     }
 
     private void Update() {
@@ -58,6 +62,7 @@ public class Dialogue : MonoBehaviour
             wait = 1f;
 
             playerScript.enabled = false;
+            playerAnimator.SetBool("IsMoving", false);
             dialogueBox.SetActive(true);
             inDialogue = true;
 

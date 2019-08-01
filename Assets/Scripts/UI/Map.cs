@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class Map : MonoBehaviour
 {
-
+    public GameObject playerIcon;
     public GameObject d, dl, dlu, dlur, dlr, du, dur, dr, l, lu, lur, lr, u, ur, r;
 
     private Room[,] rooms = new Room[42, 42];
 
     private void Start() {
-        Invoke("CreateMap", 2f);     
+        Invoke("CreateMap", 1.25f);     
     }
 
     public void GetRoom(Room roomScript, float x, float y) {

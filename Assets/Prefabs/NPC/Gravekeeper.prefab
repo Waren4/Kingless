@@ -194,6 +194,9 @@ MonoBehaviour:
   dd3: {fileID: 8872127965354276971, guid: 53272b9ca31ecaf45bd47f533ea95c65, type: 3}
   dd4: {fileID: 7314014584504860403, guid: 48ebdc9d4dde7004986b2a64c24b61b5, type: 3}
   dd5: {fileID: 167124847838299806, guid: 54f341c13e94d0349937b3b712cabc2d, type: 3}
+  dd6: {fileID: 7154603501276265601, guid: 4fbdde3a4de1e87449d440d5f4d37593, type: 3}
+  dd7: {fileID: 7926524130520738396, guid: 42b033ceb1f5e544c98842e055466dfa, type: 3}
+  dd8: {fileID: 5552948589643326984, guid: fe187ceeb3a298d469e611f982b2484a, type: 3}
 --- !u!58 &2456735323325246934
 CircleCollider2D:
   m_ObjectHideFlags: 0

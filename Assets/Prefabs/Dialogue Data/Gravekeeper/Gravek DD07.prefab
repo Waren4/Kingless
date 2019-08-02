@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4603871617774124449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 191025197582264810}
+  - component: {fileID: 7926524130520738396}
+  m_Layer: 0
+  m_Name: Gravek DD07
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &191025197582264810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4603871617774124449}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7926524130520738396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4603871617774124449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 467263a831494264ca6c3763bb7adb11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Gravekeeper
+  numberOfPhrases: 11
+  phrases:
+  - You know...
+  - My son just wanted to follow in your footsteps.
+  - He heard all the stories about how bravely you defended our people numerous times.
+    He wanted to be like you.
+  - He was a silly little kid, only eight years old. I made him a wooden sword for
+    his birthday this year, so he could "play king"...
+  - ' A few days later he disappeared, I think he went into the cave, trying to be
+    as brave as you were, fighting the evil of the world.'
+  - If not for those stories...
+  - My son would still be alive.
+  - More or less, you killed my son.
+  - '...'
+  - I'm sorry, sire.
+  - I did not mean to be so rude. My emotions got the best of me for a moment. Please
+    accept my apologies.

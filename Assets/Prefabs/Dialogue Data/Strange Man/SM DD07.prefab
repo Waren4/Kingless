@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2215918795228389661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5066823512371368995}
+  - component: {fileID: 6266083237464782999}
+  m_Layer: 0
+  m_Name: SM DD07
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5066823512371368995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2215918795228389661}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6266083237464782999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2215918795228389661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 467263a831494264ca6c3763bb7adb11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Strange Man
+  numberOfPhrases: 11
+  phrases:
+  - There you are again. You want to know more about what happened, right?
+  - '*He becomes visibly angry*'
+  - Fine. You can't save your own kingdom, at least now I have enough power from these
+    souls to be broken from your curse. I can finally stop basing my actions around
+    you.
+  - 'I can finally stop acting like this freak. '
+  - 'The jester was the one who cursed you, he made a pact with the imps and summonned
+    evil forces to imprison you in this time loop, gaining tremendous magical power
+    in return. '
+  - 'I tried to stop him. Called for you, but you were busy spending time with another
+    woman who was not my mother.  '
+  - '*You suddenly recall the moment she''s talking about, you remember ignoring her
+    screaming "Father,help!"*  '
+  - '*She takes her mask off and you see your daughter again for the first time in
+    what seems like an eternity, now with scars all over her face* '
+  - 'I stole a fraction of his power, it''s why I can use magic through these souls,
+    but it did this to me. '
+  - 'Go save the kingdom, father. *She puts the mask back on*. It''s what mother would
+    have wanted more than anything. She cared for our people, unlike you. '
+  - 'You''re a terrible person. '

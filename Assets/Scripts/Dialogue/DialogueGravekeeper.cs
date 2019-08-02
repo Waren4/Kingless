@@ -10,6 +10,9 @@ public class DialogueGravekeeper : MonoBehaviour
     public DialogueData dd3;
     public DialogueData dd4;
     public DialogueData dd5;
+    public DialogueData dd6;
+    public DialogueData dd7;
+    public DialogueData dd8;
 
     private DialogueStarter dialogueStarterScript;
     private DialogueData dialogueData;
@@ -25,6 +28,9 @@ public class DialogueGravekeeper : MonoBehaviour
         deaths = PlayerPrefs.GetInt("Deaths", 0);
         level = PlayerPrefs.GetInt("Level", 1);
 
+        if (PlayerPrefs.GetInt("GKOver", 0) == 1){
+            dialogueStarterScript.dd = dd8;
+        }
         if (deaths >= 1) {
             dialogueStarterScript.dd = dd2;
         }
@@ -37,5 +43,13 @@ public class DialogueGravekeeper : MonoBehaviour
         if(level >= 5) {
             dialogueStarterScript.dd = dd5;
         }
+        if(level >= 6) {
+            dialogueStarterScript.dd = dd6;
+        }
+        if(level >= 7) {
+            dialogueStarterScript.dd = dd7;
+            PlayerPrefs.SetInt("GKOver", 1);
+        }
+        
     }
 }

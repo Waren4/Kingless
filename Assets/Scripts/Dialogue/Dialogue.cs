@@ -59,7 +59,7 @@ public class Dialogue : MonoBehaviour
 
         if (wait <= 0f)
         {
-            wait = 1f;
+            wait = 0.5f;
 
             playerScript.enabled = false;
             playerAnimator.SetBool("IsMoving", false);

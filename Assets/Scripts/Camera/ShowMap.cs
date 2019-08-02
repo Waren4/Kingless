@@ -26,6 +26,7 @@ public class ShowMap : MonoBehaviour
 
         if (PlayerPrefs.GetInt("HasMap", 0) == 1) hasMap = true;
         else hasMap = false;
+
     }
 
     private void Update()

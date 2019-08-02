@@ -23,7 +23,7 @@ public class FloorGenerator : MonoBehaviour
     private Queue<RoomPosition> q;
     private List<Vector2> takenPositions;
 
-  
+    private List<int> usedRooms;
 
     private void Awake() {
 
@@ -37,7 +37,7 @@ public class FloorGenerator : MonoBehaviour
 
         q = new Queue<RoomPosition>();
         takenPositions = new List<Vector2>();
-
+        usedRooms = new List<int>();
         
     }
 
@@ -287,16 +287,23 @@ public class FloorGenerator : MonoBehaviour
 
     private void GenerateRandomLayout(GameObject parent, Vector3 position){
         int i;
-        GameObject spawnpoint;
+        //GameObject spawnpoint;
         GameObject decorationsInstance;
 
         i = Random.Range(0, decorations.Length);
+        if (GameManager.mode == 1) {
+            while (usedRooms.Contains(i))
+            {
+                i = Random.Range(0, decorations.Length);
+            }
+            usedRooms.Add(i);
+        }
         decorationsInstance = Instantiate(decorations[i], position,Quaternion.identity,parent.transform);
 
-        spawnpoint = decorationsInstance.GetComponent<SpawnPointTransform>().spawnPoint;
+        // spawnpoint = decorationsInstance.GetComponent<SpawnPointTransform>().spawnPoint;
 
-        i = Random.Range(0, enemyGroups.Length);
-        Instantiate(enemyGroups[i],spawnpoint.transform.position,Quaternion.identity, parent.GetComponent<EnemiesLocation>().enemies.transform);
+        // i = Random.Range(0, enemyGroups.Length);
+        Instantiate(enemyGroups[i],parent.transform.position,Quaternion.identity, parent.GetComponent<EnemiesLocation>().enemies.transform);
     }
 
     

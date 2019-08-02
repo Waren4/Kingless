@@ -558,7 +558,7 @@ public class FinalBoss : MonoBehaviour
 
 
         while (distance > positionOffset) {
-            rb.MovePosition(transform.position + direction * speed * Time.deltaTime);
+            rb.MovePosition(transform.position + direction * speed * Time.fixedDeltaTime);
 
             distance = (location.position - transform.position).magnitude;
             direction = (location.position - transform.position).normalized;

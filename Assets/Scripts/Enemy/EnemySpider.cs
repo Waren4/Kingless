@@ -54,7 +54,7 @@ public class EnemySpider : MonoBehaviour
     }
 
     
-    void Update() {
+    void FixedUpdate() {
         TickAttackTimer();
         if (timeBetweenMoves <= 0f)
         {
@@ -169,7 +169,7 @@ public class EnemySpider : MonoBehaviour
         while(moveTime >= 0f) {
             animator.SetBool("IsMoving", true);
             rb.AddForce(direction.normalized * speed );
-            yield return null;
+            yield return new WaitForFixedUpdate();
             moveTime -= Time.deltaTime;
             
         }

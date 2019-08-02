@@ -122,7 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 60
-  giveScore: 45
+  giveScore: 85
+  canKnockback: 1
   enemyScript: {fileID: 0}
   deathAnimation: {fileID: 3726251564197106554, guid: a0107f9152bb7a84e90d2b292b91eec2,
     type: 3}
@@ -142,11 +143,11 @@ MonoBehaviour:
   coin: {fileID: 4251451204214099338, guid: c7b14bb8fb58d264a8ee6bc8a9ef0104, type: 3}
   coinRange1: 0.35
   coinRange2: 0.9
-  coinNumber1: 1
-  coinNumber2: 2
-  coinNumber3: 3
+  coinNumber1: 2
+  coinNumber2: 3
+  coinNumber3: 4
   soulRange1: 0.25
-  soulRange2: 0.75
+  soulRange2: 0.85
   soulNumber1: 0
   soulNumber2: 0
   soulNumber3: 1
@@ -167,14 +168,14 @@ MonoBehaviour:
   attackRange: 8
   runRange: 4
   collisionDamage: 10
-  attackSpeed: 1.75
+  attackSpeed: 2.1
   speed: 42
   animationDelay: 0.4
   attackDown: {fileID: 4262132020959249673}
   attackLeft: {fileID: 4262132021471740095}
   attackUp: {fileID: 4262132021273128176}
   attackRight: {fileID: 4262132021399960597}
-  arrow: {fileID: 8637247860254396296, guid: ac83a79ab713b8d46b33e9fc3bd3b79a, type: 3}
+  arrow: {fileID: 8637247860254396296, guid: a60c255cf5dccff4db9841d90152c37d, type: 3}
   arrowSpeed: 345
 --- !u!50 &4262132019866320564
 Rigidbody2D:
@@ -221,7 +222,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.3}
+  m_Size: {x: 0.8, y: 1.1}
   m_EdgeRadius: 0
 --- !u!1 &4262132020959249674
 GameObject:
@@ -357,8 +358,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2126750445279392843, guid: e4454784867677646a8e928137210be3,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 4
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126750445279392843, guid: e4454784867677646a8e928137210be3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126750445279392843, guid: e4454784867677646a8e928137210be3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2126750445279392843, guid: e4454784867677646a8e928137210be3,
         type: 3}
@@ -377,13 +388,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2126750445279392843, guid: e4454784867677646a8e928137210be3,
         type: 3}
-      propertyPath: m_LocalPosition.x
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126750445279392843, guid: e4454784867677646a8e928137210be3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126750445279392843, guid: e4454784867677646a8e928137210be3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2126750445279392843, guid: e4454784867677646a8e928137210be3,
         type: 3}
-      propertyPath: m_LocalPosition.y
+      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126750445279392843, guid: e4454784867677646a8e928137210be3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126750445279392842, guid: e4454784867677646a8e928137210be3,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2126750445279392842, guid: e4454784867677646a8e928137210be3,
         type: 3}
@@ -394,11 +425,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126750445279392842, guid: e4454784867677646a8e928137210be3,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.85
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4454784867677646a8e928137210be3, type: 3}

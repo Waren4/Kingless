@@ -143,6 +143,10 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("Deaths", number);
     }
 
+    public static void Win(){
+        GameObject.FindGameObjectWithTag("Canvas").GetComponent<DropWin>().Drop();
+    }
+
     public static void Death(){
         GameObject.FindGameObjectWithTag("Canvas").GetComponent<DropDeath>().Drop();
         
@@ -158,6 +162,11 @@ public class GameManager : MonoBehaviour
 
     public static void DestroyPlayer() {
         Destroy(GameObject.FindGameObjectWithTag("Player"));
+    }
+
+    public void ResetAllProgress() {
+        PlayerPrefs.DeleteAll();
+        Debug.Log("deleted");
     }
 
     public void SetDifficulty(int dif) {

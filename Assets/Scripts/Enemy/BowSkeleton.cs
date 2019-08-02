@@ -59,6 +59,7 @@ public class BowSkeleton : MonoBehaviour
             animator.SetBool("IsMoving", false);
             if (attackTimer <= 0f) {
                 animator.SetTrigger("Attack");
+                animator.SetFloat("MoveDirection", attackDirection);
                 animator.SetFloat("AttackDirection", attackDirection);
                 Invoke("Attack", animationDelay);
                 attackTimer = attackSpeed;

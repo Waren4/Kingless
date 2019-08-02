@@ -225,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 60
   giveScore: 25
+  canKnockback: 1
   enemyScript: {fileID: 652006658951327892}
   deathAnimation: {fileID: 3726251564197106554, guid: a0107f9152bb7a84e90d2b292b91eec2,
     type: 3}
@@ -278,7 +279,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
 --- !u!114 &652006658951327892
 MonoBehaviour:

@@ -17,6 +17,7 @@ public class DialogueStrangeMan : MonoBehaviour
     private int soulLevel;
     private int soulsNumber;
     private bool paid = false;
+    private bool ePress;
 
     private int[] soulsToPay = { 0, 1, 2, 3, 4, 5, 7, 10, 10, 10, 12 };
     void Start()
@@ -39,10 +40,14 @@ public class DialogueStrangeMan : MonoBehaviour
         SetData();
     }
 
+    private void Update(){
+        ePress = Input.GetKeyDown(KeyCode.E);
+    }
+
     private void OnTriggerStay2D(Collider2D col) {
         if(col.CompareTag("Player")) {
             if(soulsNumber >= soulsToPay[soulLevel + 1]) {
-                if(!paid && Input.GetKeyDown(KeyCode.E)) {
+                if(!paid && ePress) {
                     PaySouls();
                     IncreaseSoulLevel();
                     SetData();

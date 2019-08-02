@@ -36,7 +36,8 @@ public class DialogueMatthew : MonoBehaviour
     private int sellKey;
 
     private bool shopIsActive;
-    
+
+    private bool ePress;
 
     void Start()
     {
@@ -65,16 +66,21 @@ public class DialogueMatthew : MonoBehaviour
         }
         if (deaths >= 2 && (PlayerPrefs.GetInt("HasMap",0) == 1)) {
             dialogueStarterScript.dd = dd5;
+            sellKey = 0;
         }
-        Debug.Log(sellKey);
+        
 
     }
- 
+
+    private void Update()
+    {
+        ePress = Input.GetKeyDown(KeyCode.E);
+    }
 
     private void OnTriggerStay2D(Collider2D col) {
         if(col.CompareTag("Player")) {
-            if(sellKey != 0 && Input.GetKeyDown(KeyCode.E)) {
-                Debug.Log(4);
+            if(sellKey != 0 && ePress) {
+                
                 shopScript.itemCost = costs[sellKey];
                 shopScript.costText.text = costs[sellKey].ToString();
                 shopScript.itemIcon.sprite = icons[sellKey];

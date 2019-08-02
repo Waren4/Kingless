@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     [Header ("Enemy Stats")]
     public int health;
     public int giveScore;
+    public bool canKnockback = true;
 
     [Header("Enemy Script")]
     public MonoBehaviour enemyScript;
@@ -33,7 +34,7 @@ public class Enemy : MonoBehaviour
 
     public void HitByPlayer(int damageTaken, float knockback, Vector2 position) {
         TakeDamage(damageTaken);
-        KnockBackOnHit(knockback, position);
+        if(canKnockback) KnockBackOnHit(knockback, position);
         //enemyScript.StopCoroutine("Move");     
     }
 

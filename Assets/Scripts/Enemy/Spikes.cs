@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spikes : MonoBehaviour
 {
 
-    private int collisionDamage = 10;
+    public int collisionDamage = 10;
 
     private void OnTriggerEnter2D(Collider2D col) {
         if(col.CompareTag("Player")) {

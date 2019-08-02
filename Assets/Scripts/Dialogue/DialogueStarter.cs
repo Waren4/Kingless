@@ -9,9 +9,11 @@ public class DialogueStarter : MonoBehaviour
     public GameObject sprite;
 
     private bool inDialogue;
+    private bool ePress;
 
     private void Update() {
         inDialogue = dialogueScript.inDialogue;
+        ePress = Input.GetKeyDown(KeyCode.E);
     }
 
     private void OnTriggerStay2D(Collider2D col) {
@@ -19,7 +21,7 @@ public class DialogueStarter : MonoBehaviour
             
             if (!inDialogue) {
                 sprite.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.E)) {
+                if (ePress) {
                     dialogueScript.dialogueData = dd;
                     dialogueScript.StartDialogue();
                     sprite.SetActive(false);

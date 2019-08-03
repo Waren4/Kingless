@@ -22,7 +22,7 @@ public class DisplayFloor : MonoBehaviour
             if (FloorGenerator.floorNumber == 1) floorText.text = "Cave";
             if (FloorGenerator.floorNumber == 2) floorText.text = "Catacombs";
             if (FloorGenerator.floorNumber == 3) floorText.text = "Castle";
-
+            if (FloorGenerator.floorNumber == 4) floorText.text = "Throne Room";
         }
     }
 }

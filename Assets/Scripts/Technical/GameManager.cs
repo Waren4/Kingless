@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour
         score = 0;
         gold = 0;
         souls = 0;
+        PlayerController.roomsCleared = 0;
     }
 
     public static void UpdateHighscores(int scoreAchieved){

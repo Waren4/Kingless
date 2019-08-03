@@ -294,6 +294,7 @@ public class PlayerController : MonoBehaviour
         maxHealth = baseHealth + 10*PlayerPrefs.GetInt("HealthLevel",0);
         health = maxHealth;
         speed = baseSpeed + 0.5f*PlayerPrefs.GetInt("SpeedLevel",0);
+        roomsCleared = 0;
     }
 
     private void DestroyOtherPlayerObjects() {
